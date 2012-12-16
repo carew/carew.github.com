@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/carew/carew.git",
-                "reference": "71a80c13e8ca733f354bf9047f32756aad2374be"
+                "reference": "82103061ec5a1d9c84eab5d426ad3f913308b8fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/carew/carew/archive/71a80c13e8ca733f354bf9047f32756aad2374be.zip",
-                "reference": "71a80c13e8ca733f354bf9047f32756aad2374be",
+                "url": "https://github.com/carew/carew/archive/82103061ec5a1d9c84eab5d426ad3f913308b8fd.zip",
+                "reference": "82103061ec5a1d9c84eab5d426ad3f913308b8fd",
                 "shasum": ""
             },
             "require": {
@@ -23,7 +23,7 @@
                 "symfony/yaml": "2.1.*",
                 "twig/twig": ">=1.10.0,<2.0"
             },
-            "time": "2012-12-16 16:43:38",
+            "time": "2012-12-16 17:32:04",
             "bin": [
                 "bin/carew"
             ],
@@ -56,15 +56,15 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/carew/theme-bootstrap.git",
-                "reference": "ad77cafbc170c917aa10ac441631fe1b37c8468a"
+                "reference": "a66fe9dac3897347a7710cf4cc1d80ab35655fa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/carew/theme-bootstrap/archive/ad77cafbc170c917aa10ac441631fe1b37c8468a.zip",
-                "reference": "ad77cafbc170c917aa10ac441631fe1b37c8468a",
+                "url": "https://github.com/carew/theme-bootstrap/archive/a66fe9dac3897347a7710cf4cc1d80ab35655fa8.zip",
+                "reference": "a66fe9dac3897347a7710cf4cc1d80ab35655fa8",
                 "shasum": ""
             },
-            "time": "2012-12-16 16:40:10",
+            "time": "2012-12-16 17:55:56",
             "type": "library",
             "installation-source": "source",
             "notification-url": "https://packagist.org/downloads/",
