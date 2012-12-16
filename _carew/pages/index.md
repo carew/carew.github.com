@@ -7,6 +7,8 @@ layout: readme
 **Note**: This application is based on the awesome
 [work](https://github.com/igorw/balrog/) of [igor](https://github.com/igorw/balrog/)
 
+[See project on github](https://github.com/carew/carew/)
+
 Installation
 ------------
 
