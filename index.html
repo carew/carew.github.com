@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>carew</title>
+    <title>Carew</title>
 
     <meta name="description" content="The tiny website generator">
     <meta name="author" content="Grégoire Pineau">
@@ -37,9 +37,56 @@
                 </a>
                 <a class="brand" href="..">Carew</a>
                 <div class="nav-collapse collapse">
-                                      <ul class="nav">
-                                          </ul>
-                                                    </div>
+                      <ul class="nav">
+                                    <li><a href="#installation">Installation</a></li>
+                            <li><a href="#usage">Usage</a></li>
+                            <li><a href="#themes">Themes</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                        </ul>
+                    <ul class="nav pull-right">
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Other OSS project">
+        Lyrixx
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="http://github.com/lyrixx/Silex-Kitchen-Edition" target="_blank">
+            Silex Kitchen Edition
+          </a>
+        </li>
+        <li>
+          <a href="http://github.com/lyrixx/lifestream" target="_blank">
+            Lifestream
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li class="nav-header">Follow me on</li>
+        <li>
+          <a href="http://github.com/lyrixx" target="_blank">
+            Github
+          </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/lyrixx" target="_blank">
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="http://gregoirepineau.fr" target="_blank">
+            My Personal Homepage
+          </a>
+        </li>
+        <li>
+          <a href="http://gregoirepineau.fr" target="_blank">
+            My Blog
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -49,12 +96,12 @@
         <div class="row">
           <div class="span10 offset1 content">
                           <div class="page-header">
-                <h1>carew <small>The tiny website generator</small></h1>
+                <h1>Carew <small>The tiny website generator</small></h1>
               </div>
                         <p><strong>Note</strong>: This application is based on the awesome
 <a href="https://github.com/igorw/balrog/">work</a> of <a href="https://github.com/igorw/balrog/">igor</a></p>
 
-<h2>Installation</h2>
+<h2 id="installation">Installation<a href="#installation" class="anchor">#</a></h2>
 
 <p>To start a new site, just add the dependency via composer:</p>
 
@@ -62,12 +109,11 @@
 $ composer require carew/carew:dev-master
 </code></pre>
 
-<h2>Usage</h2>
+<h2 id="usage">Usage<a href="#usage" class="anchor">#</a></h2>
 
 <p>Now you can add the following directories:</p>
 
-<ul>
-<li><p><strong>assets:</strong> All of these files will be copied to the web directory. You can
+<ul><li><p><strong>assets:</strong> All of these files will be copied to the web directory. You can
 add JavaScript, CSS and images in here.</p></li>
 <li><p><strong>layouts:</strong> The layouts are used to render the pages. They have a
 <code>.html.twig</code> suffix. You can create base templates and have more specific
@@ -76,8 +122,7 @@ with <a href="http://twig.sensiolabs.com">Twig</a></p>
 
 <p>Layouts get access to following variables:</p>
 
-<ul>
-<li><strong>posts</strong>: A listing of all posts in reverse order of publication.</li>
+<ul><li><strong>posts</strong>: A listing of all posts in reverse order of publication.</li>
 <li><strong>latest</strong>: The latest post.</li>
 <li><strong>tags</strong>: A listing of all tags with theirs associated pages/posts collection.</li>
 <li><strong>navigation</strong>: A listing of all navigation groups with
@@ -87,9 +132,7 @@ theirs associated pages/posts collection. Useful in templates to build menu.</li
 Useful for referencing assets. Must always be followed by a slash, e.g.:
 <code>{{ relativeRoot }}/main.css</code>.</li>
 <li><strong>currentPath</strong>: The current path, from the root to the current page.</li>
-</ul>
-
-<p>Filenames that follow the <code>index.$format.twig</code> naming scheme will get compiled
+</ul><p>Filenames that follow the <code>index.$format.twig</code> naming scheme will get compiled
 to an <code>index.$format</code> file.
 <strong>Note:</strong> You can also create an <code>index.md</code> file in <code>pages</code> directory.</p>
 
@@ -107,21 +150,18 @@ title: Blogging Like a Hacker
 
 # Blogging Like a Hacker
 
-* I’m bloggin yo!
+* I&acirc;&#128;&#153;m bloggin yo!
 * ORLY?
 * YARLY!
 </code></pre>
 
 <p>The following fields are defined:</p>
 
-<ul>
-<li><strong>title:</strong> Title of the blog post for display on the index.</li>
+<ul><li><strong>title:</strong> Title of the blog post for display on the index.</li>
 <li><strong>layout:</strong> Layout to be used for rendering this post. Defaults to <code>default</code>,
 which means <code>layouts/default.html.twig</code> is rendered unless specified
 otherwise.</li>
-</ul>
-
-<p>Other fields can be defined at will and used in the template.
+</ul><p>Other fields can be defined at will and used in the template.
 <code>document</code> variable contains the data of the current post.
 A post has <code>title</code>, <code>body</code> and any additional front-matter meta data.
 <code>body</code> contains the markdown body rendered as html.</p></li>
@@ -135,7 +175,7 @@ title: About
 
 # About me
 
-* I’m bloggin yo!
+* I&acirc;&#128;&#153;m bloggin yo!
 * ORLY?
 * YARLY!
 </code></pre></li>
@@ -143,7 +183,7 @@ title: About
 will be sent to twig templates. Here is a sample:</p>
 
 <pre><code>site:
-  author: Grégoire Pineau
+  author: Gr&Atilde;&copy;goire Pineau
   title:  Foo
   description: Bar
 </code></pre>
@@ -154,9 +194,7 @@ will be sent to twig templates. Here is a sample:</p>
   &lt;head&gt;
     &lt;title&gt;{{ site.title }}&lt;/title&gt;
 </code></pre></li>
-</ul>
-
-<p>In order to build the site, you can use the <code>carew build</code> command:</p>
+</ul><p>In order to build the site, you can use the <code>carew build</code> command:</p>
 
 <pre><code>$ vendor/bin/carew build
 </code></pre>
@@ -164,7 +202,7 @@ will be sent to twig templates. Here is a sample:</p>
 <p>This will populate the <code>web</code> directory with a set of files that can be
 deployed onto any static web server.</p>
 
-<h2>Themes</h2>
+<h2 id="themes">Themes<a href="#themes" class="anchor">#</a></h2>
 
 <p>You can use themes (default layouts). Thanks to twig, you just
 have to give the path to templates in the <code>config.yml</code> file</p>
@@ -195,14 +233,10 @@ name as the original one.</p>
 
 <p>Some themes:</p>
 
-<ul>
-<li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
-</ul>
+<ul><li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
+</ul><h2 id="demo">Demo<a href="#demo" class="anchor">#</a></h2>
 
-<h2>Demo</h2>
-
-<p>You want to see it in action? This doc uses carew ;)</p>
-          </div>
+<p>You want to see it in action? This doc uses carew ;)</p>          </div>
         </div>
 
                   <footer>

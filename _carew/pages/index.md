@@ -1,6 +1,7 @@
 ---
-title: carew
+title: Carew
 subtitle: The tiny website generator
+layout: readme
 ---
 
 **Note**: This application is based on the awesome
