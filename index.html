@@ -166,16 +166,13 @@ deployed onto any static web server.</p>
 
 <h2>Themes</h2>
 
-<p>You can use theme (default layout). Thanks to twig, you just
-have to give the path to templates</p>
+<p>You can use themes (default layouts). Thanks to twig, you just
+have to give the path to templates in the <code>config.yml</code> file</p>
 
-<p>```</p>
-
-<h1>config.yml</h1>
-
-<p>engine:
+<pre><code>#config.yml
+engine:
     theme_path: %dir%/vendor/carew/theme-bootstrap
-```</p>
+</code></pre>
 
 <p>Then you can customize all templates.</p>
 
@@ -184,22 +181,19 @@ name as the original one.</p>
 
 <p>You can also inherit original template with <code>extends</code>:</p>
 
-<p>```</p>
+<pre><code># my_project/layouts/default.html.twig
+{% extends 'vendor/lyrixx/carew-theme-bootstrap/layouts/default.html.twig'%}
 
-<h1>my_project/layouts/default.html.twig</h1>
-
-<p>{% extends 'vendor/lyrixx/carew-theme-bootstrap/layouts/default.html.twig'%}</p>
-
-<p>{% block nav_right %}
-    <ul class="nav pull-right">
-        <li class="dropdown">
+{% block nav_right %}
+    &lt;ul class="nav pull-right"&gt;
+        &lt;li class="dropdown"&gt;
             ...
-        </li>
-    </ul>
+        &lt;/li&gt;
+    &lt;/ul&gt;
 {% endblock %}
-```</p>
+</code></pre>
 
-<p>Some templates:</p>
+<p>Some themes:</p>
 
 <ul>
 <li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
