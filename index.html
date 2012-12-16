@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>carew</title>
+
+    <meta name="description" content="The tiny website generator">
+    <meta name="author" content="Grégoire Pineau">
+    <meta name="viewport" content="width=device-width">
+
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+    <script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="..">Carew</a>
+                <div class="nav-collapse collapse">
+                                      <ul class="nav">
+                                          </ul>
+                                                    </div>
+            </div>
+        </div>
+    </div>
+
+          <div class="container">
+
+        <div class="row">
+          <div class="span10 offset1 content">
+                          <div class="page-header">
+                <h1>carew <small>The tiny website generator</small></h1>
+              </div>
+                        <p>The tiny static site generator.</p>
+
+<p><strong>Note</strong>: This application is based on the awesome
+<a href="https://github.com/igorw/balrog/">work</a> of <a href="https://github.com/igorw/balrog/">igor</a></p>
+
+<h2>Installation</h2>
+
+<p>To start a new site, just add the dependency via composer:</p>
+
+<pre><code>$ composer init
+$ composer require lyrixx/carew:dev-master
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>Now you can add the following directories:</p>
+
+<ul>
+<li><p><strong>assets:</strong> All of these files will be copied to the web directory. You can
+add JavaScript, CSS and images in here.</p></li>
+<li><p><strong>layouts:</strong> The layouts are used to render the pages. They have a
+<code>.html.twig</code> suffix. You can create base templates and have more specific
+ones that extend them using the <code>extends</code> tag. The layouts are renderer
+with <a href="http://twig.sensiolabs.com">Twig</a></p>
+
+<p>Layouts get access to following variables:</p>
+
+<ul>
+<li><strong>posts:</strong> A listing of all posts in reverse order of publication.</li>
+<li><strong>latest:</strong> The latest post.</li>
+<li><strong>tags:</strong> A listing of all tags with theirs associated pages/posts collection.</li>
+<li><strong>navigation:</strong> A listing of all navigation groups with
+theirs associated pages/posts collection. Useful in templates to build menu.</li>
+<li><strong>pages:</strong> A listing of all pages.</li>
+<li><strong>relativeRoot:</strong> The relative path from the current page to the root.
+Useful for referencing assets. Must always be followed by a slash, e.g.:
+<code>{{ relativeRoot }}/main.css</code>.</li>
+<li><strong>currentPath:</strong> The current path, from the root to the current page.</li>
+</ul>
+
+<p>Filenames that follow the <code>index.$format.twig</code> naming scheme will get compiled
+to an <code>index.$format</code> file.
+<strong>Note:</strong> You can also create an <code>index.md</code> file in <code>pages</code> directory.</p>
+
+<p>Filenames that follow the <code>tags.$format.twig</code> naming scheme will get compiled
+to <code>tags/$tagName.$format</code> files. Templates have access to <code>tag</code> and <code>posts</code>
+variables. Here <code>posts</code> contains only Posts with current tag</p></li>
+<li><p><strong>posts:</strong> Markdown files representing blog posts. Must be in the format of
+<code>YYYY-mm-dd-slug.md</code>, e.g. <code>2012-09-20-like-a-hacker.md</code>. Each one must begin
+with a YAML front matter. Here is a sample blog post:</p>
+
+<pre><code>---
+layout: post
+title: Blogging Like a Hacker
+---
+
+# Blogging Like a Hacker
+
+* I’m bloggin yo!
+* ORLY?
+* YARLY!
+</code></pre>
+
+<p>The following fields are defined:</p>
+
+<ul>
+<li><strong>title:</strong> Title of the blog post for display on the index.</li>
+<li><strong>layout:</strong> Layout to be used for rendering this post. Defaults to <code>default</code>,
+which means <code>layouts/default.html.twig</code> is rendered unless specified
+otherwise.</li>
+</ul>
+
+<p>Other fields can be defined at will and used in the template.
+<code>document</code> variable contains the data of the current post.
+A post has <code>title</code>, <code>body</code> and any additional front-matter meta data.
+<code>body</code> contains the markdown body rendered as html.</p></li>
+<li><p><strong>pages:</strong> Markdown files representing pages. Each one must begin
+with a YAML front matter. Here is a sample page:</p>
+
+<pre><code>---
+layout: page
+title: About
+---
+
+# About me
+
+* I’m bloggin yo!
+* ORLY?
+* YARLY!
+</code></pre></li>
+<li><p><strong>config.yml:</strong> Yaml file with some configuration. All variables will be
+sent to twig templates. Here is a sample:</p>
+
+<pre><code>site:
+  author: Grégoire Pineau
+  title:  Foo
+  description: Bar
+</code></pre>
+
+<p>And in the template:</p>
+
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;{{ site.title }}&lt;/title&gt;
+</code></pre></li>
+</ul>
+
+<p>In order to build the site, you can use the <code>carew build</code> command:</p>
+
+<pre><code>$ vendor/bin/carew build
+</code></pre>
+
+<p>This will populate the <code>web</code> directory with a set of files that can be
+deployed onto any static web server.</p>
+
+<h2>Quote of the day</h2>
+
+<p>"Fly, you fools!" - Gandalf</p>
+          </div>
+        </div>
+
+                  <footer>
+            <p>
+              &copy;
+              <a href="">
+                Grégoire Pineau
+              </a>
+              2012
+              <small>
+                with help from <a href="https://github.com/lyrixx/Carew" target="_blank">Carew</a>
+                and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+              </small>
+            </p>
+          </footer>
+              </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

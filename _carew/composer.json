@@ -1,0 +1,15 @@
+{
+    "name": "lyrixx/carew-github-com",
+    "stability": "dev",
+    "authors": [
+        {
+            "name": "Grégoire Pineau",
+            "email": "lyrixx@lyrixx.info"
+        }
+    ],
+    "require": {
+        "carew/theme-bootstrap": "dev-master",
+        "carew/carew": "dev-master"
+
+    }
+}
