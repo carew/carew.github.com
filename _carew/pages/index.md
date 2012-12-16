@@ -29,16 +29,16 @@ Now you can add the following directories:
 
   Layouts get access to following variables:
 
-  * **posts:** A listing of all posts in reverse order of publication.
-  * **latest:** The latest post.
-  * **tags:** A listing of all tags with theirs associated pages/posts collection.
-  * **navigation:** A listing of all navigation groups with
+  * **posts**: A listing of all posts in reverse order of publication.
+  * **latest**: The latest post.
+  * **tags**: A listing of all tags with theirs associated pages/posts collection.
+  * **navigation**: A listing of all navigation groups with
     theirs associated pages/posts collection. Useful in templates to build menu.
-  * **pages:** A listing of all pages.
-  * **relativeRoot:** The relative path from the current page to the root.
+  * **pages**: A listing of all pages.
+  * **relativeRoot**: The relative path from the current page to the root.
     Useful for referencing assets. Must always be followed by a slash, e.g.:
     `{{ relativeRoot }}/main.css`.
-  * **currentPath:** The current path, from the root to the current page.
+  * **currentPath**: The current path, from the root to the current page.
 
   Filenames that follow the `index.$format.twig` naming scheme will get compiled
   to an `index.$format` file.
@@ -89,8 +89,8 @@ Now you can add the following directories:
         * ORLY?
         * YARLY!
 
-* **config.yml:** Yaml file with some configuration. All variables will be
-  sent to twig templates. Here is a sample:
+* **config.yml:** Yaml file with some configuration. All variables unde `site`
+  will be sent to twig templates. Here is a sample:
 
         site:
           author: Grégoire Pineau
@@ -109,6 +109,42 @@ In order to build the site, you can use the `carew build` command:
 
 This will populate the `web` directory with a set of files that can be
 deployed onto any static web server.
+
+Themes
+------
+
+You can use theme (default layout). Thanks to twig, you just
+have to give the path to templates
+
+```
+#config.yml
+engine:
+    theme_path: %dir%/vendor/carew/theme-bootstrap
+```
+
+Then you can customize all templates.
+
+Create a new template in your `layouts` directory with the same
+name as the original one.
+
+You can also inherit original template with `extends`:
+
+```
+# my_project/layouts/default.html.twig
+{% extends 'vendor/lyrixx/carew-theme-bootstrap/layouts/default.html.twig'%}
+
+{% block nav_right %}
+    <ul class="nav pull-right">
+        <li class="dropdown">
+            ...
+        </li>
+    </ul>
+{% endblock %}
+```
+
+Some templates:
+
+* [twitter bootstrap](http://github.com/carew/theme-bootstrap/)
 
 Demo
 ----

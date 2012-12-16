@@ -51,9 +51,7 @@
                           <div class="page-header">
                 <h1>carew <small>The tiny website generator</small></h1>
               </div>
-                        <p>The tiny static site generator.</p>
-
-<p><strong>Note</strong>: This application is based on the awesome
+                        <p><strong>Note</strong>: This application is based on the awesome
 <a href="https://github.com/igorw/balrog/">work</a> of <a href="https://github.com/igorw/balrog/">igor</a></p>
 
 <h2>Installation</h2>
@@ -61,7 +59,7 @@
 <p>To start a new site, just add the dependency via composer:</p>
 
 <pre><code>$ composer init
-$ composer require lyrixx/carew:dev-master
+$ composer require carew/carew:dev-master
 </code></pre>
 
 <h2>Usage</h2>
@@ -79,16 +77,16 @@ with <a href="http://twig.sensiolabs.com">Twig</a></p>
 <p>Layouts get access to following variables:</p>
 
 <ul>
-<li><strong>posts:</strong> A listing of all posts in reverse order of publication.</li>
-<li><strong>latest:</strong> The latest post.</li>
-<li><strong>tags:</strong> A listing of all tags with theirs associated pages/posts collection.</li>
-<li><strong>navigation:</strong> A listing of all navigation groups with
+<li><strong>posts</strong>: A listing of all posts in reverse order of publication.</li>
+<li><strong>latest</strong>: The latest post.</li>
+<li><strong>tags</strong>: A listing of all tags with theirs associated pages/posts collection.</li>
+<li><strong>navigation</strong>: A listing of all navigation groups with
 theirs associated pages/posts collection. Useful in templates to build menu.</li>
-<li><strong>pages:</strong> A listing of all pages.</li>
-<li><strong>relativeRoot:</strong> The relative path from the current page to the root.
+<li><strong>pages</strong>: A listing of all pages.</li>
+<li><strong>relativeRoot</strong>: The relative path from the current page to the root.
 Useful for referencing assets. Must always be followed by a slash, e.g.:
 <code>{{ relativeRoot }}/main.css</code>.</li>
-<li><strong>currentPath:</strong> The current path, from the root to the current page.</li>
+<li><strong>currentPath</strong>: The current path, from the root to the current page.</li>
 </ul>
 
 <p>Filenames that follow the <code>index.$format.twig</code> naming scheme will get compiled
@@ -141,8 +139,8 @@ title: About
 * ORLY?
 * YARLY!
 </code></pre></li>
-<li><p><strong>config.yml:</strong> Yaml file with some configuration. All variables will be
-sent to twig templates. Here is a sample:</p>
+<li><p><strong>config.yml:</strong> Yaml file with some configuration. All variables unde <code>site</code>
+will be sent to twig templates. Here is a sample:</p>
 
 <pre><code>site:
   author: Grégoire Pineau
@@ -166,9 +164,50 @@ sent to twig templates. Here is a sample:</p>
 <p>This will populate the <code>web</code> directory with a set of files that can be
 deployed onto any static web server.</p>
 
-<h2>Quote of the day</h2>
+<h2>Themes</h2>
 
-<p>"Fly, you fools!" - Gandalf</p>
+<p>You can use theme (default layout). Thanks to twig, you just
+have to give the path to templates</p>
+
+<p>```</p>
+
+<h1>config.yml</h1>
+
+<p>engine:
+    theme_path: %dir%/vendor/carew/theme-bootstrap
+```</p>
+
+<p>Then you can customize all templates.</p>
+
+<p>Create a new template in your <code>layouts</code> directory with the same
+name as the original one.</p>
+
+<p>You can also inherit original template with <code>extends</code>:</p>
+
+<p>```</p>
+
+<h1>my_project/layouts/default.html.twig</h1>
+
+<p>{% extends 'vendor/lyrixx/carew-theme-bootstrap/layouts/default.html.twig'%}</p>
+
+<p>{% block nav_right %}
+    <ul class="nav pull-right">
+        <li class="dropdown">
+            ...
+        </li>
+    </ul>
+{% endblock %}
+```</p>
+
+<p>Some templates:</p>
+
+<ul>
+<li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
+</ul>
+
+<h2>Demo</h2>
+
+<p>You want to see it in action? This doc uses carew ;)</p>
           </div>
         </div>
 
