@@ -1,6 +1,5 @@
 {% extends 'default.html.twig' %}
 
-
 {% block nav_left %}
     <ul class="nav">
         {% if document.toc is defined and document.toc.0 is defined%}
@@ -8,6 +7,8 @@
                 <li><a href="#{{ item.id}}">{{ item.title }}</a></li>
             {% endfor %}
         {% endif %}
+         <li class="divider-vertical"></li>
+        {{ parent() }}
     </ul>
 {% endblock %}
 

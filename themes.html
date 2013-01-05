@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Themes</title>
+
+    <meta name="description" content="The tiny website generator">
+    <meta name="author" content="Grégoire Pineau">
+    <meta name="viewport" content="width=device-width">
+
+    
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/highlight.css">
+
+    
+    <script src="./js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+      <a href="https://github.com/carew/carew"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:10000" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+          <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+              <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href=".">Carew</a>
+                  <div class="nav-collapse collapse">
+                        <ul class="nav">
+                                    <li><a href="#usage">Usage</a></li>
+                            <li><a href="#existing-themes">Existing Themes</a></li>
+                             <li class="divider-vertical"></li>
+                              <ul class="nav">
+                                                                                                            <li><a href="./plugins.html">Plugins</a></li>
+                                                                                                                <li class="active"><a href="./themes.html">Themes</a></li>
+                                                                                                    </ul>
+                    
+    </ul>
+                      <ul class="nav pull-right">
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Other OSS project">
+        Lyrixx
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="http://github.com/lyrixx/Silex-Kitchen-Edition" target="_blank">
+            Silex Kitchen Edition
+          </a>
+        </li>
+        <li>
+          <a href="http://github.com/lyrixx/lifestream" target="_blank">
+            Lifestream
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li class="nav-header">Follow me on</li>
+        <li>
+          <a href="http://github.com/lyrixx" target="_blank">
+            Github
+          </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/lyrixx" target="_blank">
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="http://gregoirepineau.fr" target="_blank">
+            My Personal Homepage
+          </a>
+        </li>
+        <li>
+          <a href="http://gregoirepineau.fr" target="_blank">
+            My Blog
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    
+    
+          <div class="container">
+
+        
+                  <div class="row">
+            <div class="span10 offset1 content">
+                                                <div class="page-header">
+                    <h1>Themes</h1>
+                  </div>
+                              
+              <h2 id="usage">Usage<a href="#usage" class="anchor">#</a></h2>
+
+<p>You can use themes (default layouts). Thanks to twig, you just
+have to give the path to templates in the <code>config.yml</code> file</p>
+
+<pre><code>#config.yml
+engine:
+    theme_path: %dir%/vendor/carew/theme-bootstrap
+</code></pre>
+
+<p>Then you can customize all templates.</p>
+
+<p>Create a new template in your <code>layouts</code> directory with the same
+name as the original one.</p>
+
+<p>You can also inherit original template with <code>extends</code>:</p>
+
+<pre><code># my_project/layouts/default.html.twig
+{% extends 'vendor/lyrixx/carew-theme-bootstrap/layouts/default.html.twig'%}
+
+{% block nav_right %}
+    &lt;ul class="nav pull-right"&gt;
+        &lt;li class="dropdown"&gt;
+            ...
+        &lt;/li&gt;
+    &lt;/ul&gt;
+{% endblock %}
+</code></pre>
+
+<h2 id="existing-themes">Existing Themes<a href="#existing-themes" class="anchor">#</a></h2>
+
+<ul><li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
+</ul>            </div>
+          </div>
+        
+                  <footer>
+            <p>
+              &copy;
+              <a href="">
+                Grégoire Pineau
+              </a>
+              2013
+              <small>
+                with help from <a href="https://github.com/lyrixx/Carew" target="_blank">Carew</a>
+                and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+              </small>
+            </p>
+          </footer>
+              </div>
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="./js/vendor/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+      </body>
+</html>

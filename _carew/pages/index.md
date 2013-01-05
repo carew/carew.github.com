@@ -1,24 +1,32 @@
 ---
 title: Carew
 subtitle: The tiny website generator
-layout: readme
+layout: doc
 ---
 
-**Note**: This application is based on the awesome
-[work](https://github.com/igorw/balrog/) of [igor](https://github.com/igorw/balrog/)
+What is it?
+-----------
+
+**Carew** is another static site / blog generator.
+Write some blog post in [markdown](http://daringfireball.net/projects/markdown/),
+carew will render them in html.
 
 Installation
 ------------
 
-To start a new site, just add the dependency via composer:
+The best way to start with carew, it's with the carew boilerplate:
+You will need [composer](http://getcomposer.org).
 
-    $ composer init
-    $ composer require carew/carew:dev-master
+    $ composer create project/carew-boilterplate my_blog
 
-Usage
------
+That's all.
 
-Now you can add the following directories:
+Documentation
+-------------
+
+### Structure
+
+Now you can use the following directories:
 
 * **assets:** All of these files will be copied to the web directory. You can
   add JavaScript, CSS and images in here.
@@ -30,16 +38,20 @@ Now you can add the following directories:
 
   Layouts get access to following variables:
 
-  * **posts**: A listing of all posts in reverse order of publication.
-  * **latest**: The latest post.
-  * **tags**: A listing of all tags with theirs associated pages/posts collection.
-  * **navigation**: A listing of all navigation groups with
-    theirs associated pages/posts collection. Useful in templates to build menu.
-  * **pages**: A listing of all pages.
-  * **relativeRoot**: The relative path from the current page to the root.
-    Useful for referencing assets. Must always be followed by a slash, e.g.:
-    `{{ relativeRoot }}/main.css`.
   * **currentPath**: The current path, from the root to the current page.
+  * **document**: The current document to render.
+    A document has `title`, `body` and any additional front-matter meta data
+    in `metadatas`. `body` contains the body rendered as html. For more property,
+    look at `Document` class.
+  * **latest**: The latest post.
+  * **navigation**: A listing of all navigation groups with theirs associated
+     pages/posts collection. Useful in templates to build menu.
+  * **pages**: A listing of all pages.
+  * **posts**: A listing of all posts in reverse order of publication.
+  * **relativeRoot**: The relative path from the current page to the root. Useful
+   for referencing assets. Must always be followed by a slash, e.g.:
+    `{{ relativeRoot }}/main.css`.
+  * **tags**: A listing of all tags with theirs associated pages/posts collection.
 
   Filenames that follow the `index.$format.twig` naming scheme will get compiled
   to an `index.$format` file.
@@ -71,10 +83,8 @@ Now you can add the following directories:
     which means `layouts/default.html.twig` is rendered unless specified
     otherwise.
 
-  Other fields can be defined at will and used in the template.
-  `document` variable contains the data of the current post.
-  A post has `title`, `body` and any additional front-matter meta data.
-  `body` contains the markdown body rendered as html.
+  You can add more fields and used them in the template, under the
+  `document.metadata` variable.
 
 * **pages:** Markdown files representing pages. Each one must begin
   with a YAML front matter. Here is a sample page:
@@ -86,9 +96,17 @@ Now you can add the following directories:
 
         # About me
 
-        * I’m bloggin yo!
-        * ORLY?
-        * YARLY!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  You can add more fields and used them in the template, under the
+  `document.metadata` variable.
+
+* **api**: Markdown, or not, files. Each one will be rendered in `/api/filename.html`.
 
 * **config.yml:** Yaml file with some configuration. All variables unde `site`
   will be sent to twig templates. Here is a sample:
@@ -104,46 +122,74 @@ Now you can add the following directories:
           <head>
             <title>{{ site.title }}</title>
 
-In order to build the site, you can use the `carew build` command:
+### Usage
 
-    $ vendor/bin/carew build
+#### Build the site
+
+In order to build the site, you can use the `carew:build` command:
+
+    $ vendor/bin/carew carew:build
 
 This will populate the `web` directory with a set of files that can be
 deployed onto any static web server.
 
-Themes
-------
+You can change input / ouput directory. Run:
 
-You can use themes (default layouts). Thanks to twig, you just
-have to give the path to templates in the `config.yml` file
+    $ vendor/bin/carew help carew:build
 
-    #config.yml
-    engine:
-        theme_path: %dir%/vendor/carew/theme-bootstrap
+#### Create a new blog post
 
-Then you can customize all templates.
+Just run:
 
-Create a new template in your `layouts` directory with the same
-name as the original one.
-
-You can also inherit original template with `extends`:
-
-    # my_project/layouts/default.html.twig
-    {% extends 'vendor/lyrixx/carew-theme-bootstrap/layouts/default.html.twig'%}
-
-    {% block nav_right %}
-        <ul class="nav pull-right">
-            <li class="dropdown">
-                ...
-            </li>
-        </ul>
-    {% endblock %}
-
-Some themes:
-
-* [twitter bootstrap](http://github.com/carew/theme-bootstrap/)
+    $ vendor/bin/carew carew:generate:post [--date="..."] title
 
 Demo
 ----
 
 You want to see it in action? This doc uses carew ;)
+Have a look to the [codebase](https://github.com/carew/carew.github.com/tree/master/_carew)
+
+What to contribute
+------------------
+
+Please, [fork me](https://github.com/carew/carew) and send me a pull request :)
+
+Why another one?
+----------------
+
+I used to used [jekyll](https://github.com/mojombo/jekyll), but I was very unhappy with
+the templating engine. And then, I discovered
+[balrog](https://github.com/igorw/balrog/tree/8ed377d4eb1759926d8cfceb1796ed4234dceaef).
+I was very cool but [igor](https://github.com/igorw/balrog/) took
+another direction. So I fork it, and carew was born.
+
+Why Carew?
+
+Like to all other tatic site / blog generator ([jekyll](https://github.com/mojombo/jekyll),
+[hyde](https://github.com/hyde/hyde), [pool](https://github.com/obensonne/poole),
+[lanyon](https://github.com/spjwebster/lanyon)), its name come from the
+*[Strange Case of Dr Jekyll and Mr Hyde](http://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde)*
+story.
+
+Licence
+-------
+
+    Copyright (c) 2013 Grégoire Pineau
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is furnished
+    to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.

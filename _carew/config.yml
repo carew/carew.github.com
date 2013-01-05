@@ -7,3 +7,5 @@ site:
 
 engine:
     theme_path: %dir%/vendor/carew/theme-bootstrap
+    extensions:
+        - Carew\Plugin\Toc\TocExtension
