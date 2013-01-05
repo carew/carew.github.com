@@ -17,7 +17,9 @@ Installation
 The best way to start with carew, it's with the carew boilerplate:
 You will need [composer](http://getcomposer.org).
 
-    $ composer create project/carew-boilterplate my_blog
+    $ composer create-project carew/boilerplate my_website
+    $ cd my_website
+    $ vendor/bin/carew carew:build
 
 That's all.
 
