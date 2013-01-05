@@ -157,8 +157,8 @@ Demo
 You want to see it in action? This doc uses carew ;)
 Have a look to the [codebase](https://github.com/carew/carew.github.com/tree/master/_carew)
 
-What to contribute
-------------------
+Want to contribute?
+-------------------
 
 Please, [fork me](https://github.com/carew/carew) and send me a pull request :)
 
