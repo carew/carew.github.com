@@ -22,7 +22,7 @@ name as the original one.
 You can also inherit original template with `extends`:
 
     # my_project/layouts/default.html.twig
-    {% extends 'vendor/lyrixx/carew-theme-bootstrap/layouts/default.html.twig'%}
+    {% extends 'vendor/carew/theme-bootstrap/layouts/index.atom.twig'%}
 
     {% block nav_right %}
         <ul class="nav pull-right">
