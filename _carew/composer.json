@@ -1,6 +1,9 @@
 {
     "name": "carew/website",
-    "stability": "dev",
+    "description": "Carew websute",
+    "license": "MIT",
+    "homepage": "http://carew.github.com/",
+    "keywords": ["carew"],
     "authors": [
         {
             "name": "Grégoire Pineau",
@@ -11,5 +14,6 @@
         "carew/carew": "*",
         "carew/theme-bootstrap": "*",
         "carew/plugin-toc": "*"
-    }
+    },
+    "minimum-stability": "dev"
 }
