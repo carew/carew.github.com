@@ -1,5 +1,5 @@
 {
-    "hash": "2ae3105f617adc32e444640dfde8f568",
+    "hash": "54117f0a9e2b87a8f153bda3f7a31ccb",
     "packages": [
         {
             "name": "carew/carew",
@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/carew/carew.git",
-                "reference": "24703253f4cc4d0bc1cb7340579533ce35ae89ff"
+                "reference": "21042dd6d2d30be45d6f5229a392027e5550b3b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/carew/carew/archive/24703253f4cc4d0bc1cb7340579533ce35ae89ff.zip",
-                "reference": "24703253f4cc4d0bc1cb7340579533ce35ae89ff",
+                "url": "https://github.com/carew/carew/archive/21042dd6d2d30be45d6f5229a392027e5550b3b2.zip",
+                "reference": "21042dd6d2d30be45d6f5229a392027e5550b3b2",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
                 "symfony/yaml": ">=2.1,<3.0",
                 "twig/twig": ">=1.11.0,<2.0"
             },
-            "time": "2013-01-05 16:07:49",
+            "time": "2013-01-05 18:27:27",
             "bin": [
                 "bin/carew"
             ],
@@ -54,8 +54,54 @@
                 }
             ],
             "description": "The tiny static site generator.",
+            "homepage": "http://carew.github.com/",
             "keywords": [
-                "static-site-generator"
+                "static-site-generator",
+                "carew"
+            ]
+        },
+        {
+            "name": "carew/plugin-highlight",
+            "version": "dev-master",
+            "target-dir": "Carew/Plugin/Highlight",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carew/plugin-highlight",
+                "reference": "5bd0e251ebe638b20c56cf6934c67ee3d0538e3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/carew/plugin-highlight/archive/5bd0e251ebe638b20c56cf6934c67ee3d0538e3e.zip",
+                "reference": "5bd0e251ebe638b20c56cf6934c67ee3d0538e3e",
+                "shasum": ""
+            },
+            "require": {
+                "carew/carew": "*",
+                "easybook/geshi": "dev-master"
+            },
+            "time": "2013-01-05 22:12:50",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Carew\\Plugin\\Highlight": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info",
+                    "homepage": "http://gregoirepineau.fr"
+                }
+            ],
+            "description": "Highlight plugin for carew",
+            "homepage": "http://carew.github.com/",
+            "keywords": [
+                "carew"
             ]
         },
         {
@@ -65,18 +111,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/carew/plugin-toc",
-                "reference": "5e182ff62a2d3e4b405b0630ec8eb9bab731dc40"
+                "reference": "4817590843f18952458f00a6b5f9f3f4d84bdb4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/carew/plugin-toc/archive/5e182ff62a2d3e4b405b0630ec8eb9bab731dc40.zip",
-                "reference": "5e182ff62a2d3e4b405b0630ec8eb9bab731dc40",
+                "url": "https://github.com/carew/plugin-toc/archive/4817590843f18952458f00a6b5f9f3f4d84bdb4c.zip",
+                "reference": "4817590843f18952458f00a6b5f9f3f4d84bdb4c",
                 "shasum": ""
             },
             "require": {
                 "carew/carew": "*"
             },
-            "time": "2013-01-05 16:04:04",
+            "time": "2013-01-05 17:08:46",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -103,18 +149,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/carew/theme-bootstrap.git",
-                "reference": "b7076a499e0687f7045cabe9bff1fdea6b3fc598"
+                "reference": "v1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/carew/theme-bootstrap/archive/b7076a499e0687f7045cabe9bff1fdea6b3fc598.zip",
-                "reference": "b7076a499e0687f7045cabe9bff1fdea6b3fc598",
+                "url": "https://github.com/carew/theme-bootstrap/archive/v1.0.0.zip",
+                "reference": "v1.0.0",
                 "shasum": ""
             },
             "require": {
                 "carew/carew": "*"
             },
-            "time": "2013-01-05 15:29:18",
+            "time": "2013-01-05 18:09:52",
             "type": "library",
             "installation-source": "source",
             "notification-url": "https://packagist.org/downloads/",
@@ -132,24 +178,29 @@
         },
         {
             "name": "dflydev/markdown",
-            "version": "v1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dflydev/dflydev-markdown.git",
-                "reference": "v1.0.2"
+                "reference": "11f8faa2d17f717a038b4d372abd22a6ac4a15dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/dflydev/dflydev-markdown/zipball/v1.0.2",
-                "reference": "v1.0.2",
+                "url": "https://github.com/dflydev/dflydev-markdown/archive/11f8faa2d17f717a038b4d372abd22a6ac4a15dc.zip",
+                "reference": "11f8faa2d17f717a038b4d372abd22a6ac4a15dc",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3"
             },
-            "time": "2012-01-15 19:36:37",
+            "time": "2012-07-15 16:31:27",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "dflydev\\markdown": "src"
@@ -157,7 +208,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "New BSD License"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -186,17 +237,64 @@
             ]
         },
         {
-            "name": "kevinlebrun/slug.php",
-            "version": "0.1.0",
+            "name": "easybook/geshi",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinlebrun/slug.php",
-                "reference": "0.1.0"
+                "url": "https://github.com/javiereguiluz/geshi",
+                "reference": "6f5f9c621936faf90d92f355967604fe07f7a60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/kevinlebrun/slug.php/archive/0.1.0.zip",
-                "reference": "0.1.0",
+                "url": "https://github.com/javiereguiluz/geshi/archive/6f5f9c621936faf90d92f355967604fe07f7a60f.zip",
+                "reference": "6f5f9c621936faf90d92f355967604fe07f7a60f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">4.3.0"
+            },
+            "time": "2012-09-28 10:33:45",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "classmap": [
+                    "./"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Benny Baumann",
+                    "email": "BenBE@geshi.org"
+                },
+                {
+                    "name": "Nigel McNie",
+                    "email": "nigel@geshi.org"
+                }
+            ],
+            "description": "GeSHi - Generic Syntax Highlighter. This is an unmodified port of GeSHi project code found on SourceForge.",
+            "homepage": "http://qbnz.com/highlighter",
+            "keywords": [
+                "syntax",
+                "highlight",
+                "highlighter"
+            ]
+        },
+        {
+            "name": "kevinlebrun/slug.php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevinlebrun/slug.php",
+                "reference": "9190c5ccd64c1e1897e42b93ce1ebc88abbf2d9d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kevinlebrun/slug.php/archive/9190c5ccd64c1e1897e42b93ce1ebc88abbf2d9d.zip",
+                "reference": "9190c5ccd64c1e1897e42b93ce1ebc88abbf2d9d",
                 "shasum": ""
             },
             "require": {
@@ -206,9 +304,9 @@
                 "phpunit/phpunit": "3.7.*",
                 "squizlabs/php_codesniffer": "1.*"
             },
-            "time": "2012-12-03 22:32:56",
+            "time": "2012-12-04 20:50:19",
             "type": "library",
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Slug": "lib/"
@@ -237,29 +335,29 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Pimple.git",
-                "reference": "v1.0.1"
+                "reference": "f145dc796b76635e5419354e6d7dce4d6c8cd04d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Pimple/archive/v1.0.1.zip",
-                "reference": "v1.0.1",
+                "url": "https://github.com/fabpot/Pimple/archive/f145dc796b76635e5419354e6d7dce4d6c8cd04d.zip",
+                "reference": "f145dc796b76635e5419354e6d7dce4d6c8cd04d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-11-11 08:32:34",
+            "time": "2013-01-04 16:53:43",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Pimple": "lib/"
@@ -284,28 +382,33 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.1.6",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console",
-                "reference": "v2.1.6"
+                "reference": "6b315730ff75ed0e78e3780bfa6e95a263478d3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Console/archive/v2.1.6.zip",
-                "reference": "v2.1.6",
+                "url": "https://github.com/symfony/Console/archive/6b315730ff75ed0e78e3780bfa6e95a263478d3d.zip",
+                "reference": "6b315730ff75ed0e78e3780bfa6e95a263478d3d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-12-13 17:42:00",
+            "time": "2013-01-05 15:33:05",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\Console": ""
+                    "Symfony\\Component\\Console\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -327,35 +430,40 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.1.6",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher",
-                "reference": "v2.1.6"
+                "reference": "0fcc9fa82fa3ea7ec2605af2e8137698fbaca3dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/EventDispatcher/archive/v2.1.6.zip",
-                "reference": "v2.1.6",
+                "url": "https://github.com/symfony/EventDispatcher/archive/0fcc9fa82fa3ea7ec2605af2e8137698fbaca3dc.zip",
+                "reference": "0fcc9fa82fa3ea7ec2605af2e8137698fbaca3dc",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/dependency-injection": "2.1.*"
+                "symfony/dependency-injection": "2.2.*"
             },
             "suggest": {
-                "symfony/dependency-injection": "2.1.*",
-                "symfony/http-kernel": "2.1.*"
+                "symfony/dependency-injection": "2.2.*",
+                "symfony/http-kernel": "2.2.*"
             },
-            "time": "2012-12-06 10:00:55",
+            "time": "2013-01-04 17:02:19",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\EventDispatcher": ""
+                    "Symfony\\Component\\EventDispatcher\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -377,28 +485,33 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.1.6",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem",
-                "reference": "v2.1.6"
+                "reference": "bd936471934f0a718bce5b057ae658079c71b97c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Filesystem/archive/v2.1.6.zip",
-                "reference": "v2.1.6",
+                "url": "https://github.com/symfony/Filesystem/archive/bd936471934f0a718bce5b057ae658079c71b97c.zip",
+                "reference": "bd936471934f0a718bce5b057ae658079c71b97c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-12-11 10:40:22",
+            "time": "2013-01-05 17:52:40",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\Filesystem": ""
+                    "Symfony\\Component\\Filesystem\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -420,28 +533,33 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.1.6",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/Finder",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder",
-                "reference": "v2.1.6"
+                "reference": "f6def71f171a9c897d4abcbb653919f9bd01dc9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Finder/archive/v2.1.6.zip",
-                "reference": "v2.1.6",
+                "url": "https://github.com/symfony/Finder/archive/f6def71f171a9c897d4abcbb653919f9bd01dc9d.zip",
+                "reference": "f6def71f171a9c897d4abcbb653919f9bd01dc9d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-12-10 12:46:54",
+            "time": "2013-01-04 16:58:00",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\Finder": ""
+                    "Symfony\\Component\\Finder\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -463,28 +581,33 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.1.6",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml",
-                "reference": "v2.1.6"
+                "reference": "edec5d74dff258a3af1734c9870f3e7d7700e6a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Yaml/archive/v2.1.6.zip",
-                "reference": "v2.1.6",
+                "url": "https://github.com/symfony/Yaml/archive/edec5d74dff258a3af1734c9870f3e7d7700e6a0.zip",
+                "reference": "edec5d74dff258a3af1734c9870f3e7d7700e6a0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-12-06 10:00:55",
+            "time": "2013-01-05 17:52:40",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Component\\Yaml": ""
+                    "Symfony\\Component\\Yaml\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -506,29 +629,29 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.11.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "v1.11.1"
+                "reference": "ddd4b732f9aa182edb54b89891c7fd25668354a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/archive/v1.11.1.zip",
-                "reference": "v1.11.1",
+                "url": "https://github.com/fabpot/Twig/archive/ddd4b732f9aa182edb54b89891c7fd25668354a4.zip",
+                "reference": "ddd4b732f9aa182edb54b89891c7fd25668354a4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2012-11-11 17:17:59",
+            "time": "2013-01-05 10:14:46",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Twig_": "lib/"
@@ -559,10 +682,8 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "carew/carew": 20,
-        "carew/theme-bootstrap": 20,
-        "carew/plugin-toc": 20
+        "carew/plugin-highlight": 20
     }
 }

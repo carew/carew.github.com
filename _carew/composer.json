@@ -1,6 +1,6 @@
 {
     "name": "carew/website",
-    "description": "Carew websute",
+    "description": "Carew website",
     "license": "MIT",
     "homepage": "http://carew.github.com/",
     "keywords": ["carew"],
@@ -13,7 +13,8 @@
     "require": {
         "carew/carew": "*",
         "carew/theme-bootstrap": "*",
-        "carew/plugin-toc": "*"
+        "carew/plugin-toc": "*",
+        "carew/plugin-highlight": "*"
     },
     "minimum-stability": "dev"
 }

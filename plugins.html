@@ -115,17 +115,17 @@
 <p>You can use as many plugin as you want. You just
 have to register class to register in the <code>config.yml</code> file</p>
 
-<pre><code>#config.yml
-engine:
-    extensions:
-        - Carew\Plugin\Toc\TocExtension
-</code></pre>
+<pre class="yaml" style="font-family:monospace;"><span style="color: blue;">#config.yml</span><span style="color: #007F45;">
+engine</span>:<span style="color: #007F45;">
+    extensions</span><span style="font-weight: bold; color: brown;">:
+</span>        - Carew\Plugin\Toc\TocExtension</pre>
 
 <p>That's it.</p>
 
 <h2 id="existing-plugins">Existing Plugins<a href="#existing-plugins" class="anchor">#</a></h2>
 
-<ul><li><a href="https://github.com/carew/plugin-toc">toc builder</a></li>
+<ul><li><a href="https://github.com/carew/plugin-toc">TOC Builder</a>: Build a Table Of Content</li>
+<li><a href="https://github.com/carew/plugin-highlight">HighLighter</a>: Highligh your code</li>
 </ul><h2 id="how-to-write-a-plugin">How to write a plugin<a href="#how-to-write-a-plugin" class="anchor">#</a></h2>
 
 <p>The plugin must implements <code>ExtensionInterface</code>.</p>

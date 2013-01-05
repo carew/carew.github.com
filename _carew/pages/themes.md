@@ -10,6 +10,7 @@ Usage
 You can use themes (default layouts). Thanks to twig, you just
 have to give the path to templates in the `config.yml` file
 
+    yaml
     #config.yml
     engine:
         theme_path: %dir%/vendor/carew/theme-bootstrap
@@ -21,6 +22,7 @@ name as the original one.
 
 You can also inherit original template with `extends`:
 
+    twig
     # my_project/layouts/default.html.twig
     {% extends 'vendor/carew/theme-bootstrap/layouts/index.atom.twig'%}
 

@@ -114,10 +114,9 @@
 <p>You can use themes (default layouts). Thanks to twig, you just
 have to give the path to templates in the <code>config.yml</code> file</p>
 
-<pre><code>#config.yml
-engine:
-    theme_path: %dir%/vendor/carew/theme-bootstrap
-</code></pre>
+<pre class="yaml" style="font-family:monospace;"><span style="color: blue;">#config.yml</span><span style="color: #007F45;">
+engine</span>:<span style="color: green;">
+    theme_path</span><span style="font-weight: bold; color: brown;">: </span><span style="font-weight: bold; color: red;">%dir%/vendor/carew/theme-bootstrap</span></pre>
 
 <p>Then you can customize all templates.</p>
 
@@ -126,17 +125,16 @@ name as the original one.</p>
 
 <p>You can also inherit original template with <code>extends</code>:</p>
 
-<pre><code># my_project/layouts/default.html.twig
-{% extends 'vendor/carew/theme-bootstrap/layouts/index.atom.twig'%}
-
-{% block nav_right %}
-    &lt;ul class="nav pull-right"&gt;
-        &lt;li class="dropdown"&gt;
+<pre class="twig" style="font-family:monospace;"># my_project/layouts/default.html.twig
+<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/extends.html"><span style="color: #0600FF;">extends</span></a> <span style="color: #ff0000;">'vendor/carew/theme-bootstrap/layouts/index.atom.twig'</span><span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span>
+&nbsp;
+<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/block.html"><span style="color: #0600FF;">block</span></a> <span style="color: #00aaff;">nav_right</span> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span>
+    &lt;ul class=&quot;nav pull-right&quot;&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
             ...
         &lt;/li&gt;
     &lt;/ul&gt;
-{% endblock %}
-</code></pre>
+<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/endblock.html"><span style="color: #0600FF;">endblock</span></a> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span></pre>
 
 <h2 id="existing-themes">Existing Themes<a href="#existing-themes" class="anchor">#</a></h2>
 

@@ -10,6 +10,7 @@ Usage
 You can use as many plugin as you want. You just
 have to register class to register in the `config.yml` file
 
+    yaml
     #config.yml
     engine:
         extensions:
@@ -20,7 +21,8 @@ That's it.
 Existing Plugins
 ----------------
 
-* [toc builder](https://github.com/carew/plugin-toc)
+* [TOC Builder](https://github.com/carew/plugin-toc): Build a Table Of Content
+* [HighLighter](https://github.com/carew/plugin-highlight): Highligh your code
 
 How to write a plugin
 ---------------------

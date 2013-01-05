@@ -125,10 +125,9 @@ carew will render them in html.</p>
 <p>The best way to start with carew, it's with the carew boilerplate:
 You will need <a href="http://getcomposer.org">composer</a>.</p>
 
-<pre><code>$ composer create-project carew/boilerplate my_website
-$ cd my_website
-$ vendor/bin/carew carew:build
-</code></pre>
+<pre class="bash" style="font-family:monospace;">$ composer create-project carew<span style="color: #000000; font-weight: bold;">/</span>boilerplate my_website
+$ <span style="color: #7a0874; font-weight: bold;">cd</span> my_website
+$ vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew carew:build</pre>
 
 <p>That's all.</p>
 
@@ -216,41 +215,36 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <li><p><strong>config.yml:</strong> Yaml file with some configuration. All variables unde <code>site</code>
 will be sent to twig templates. Here is a sample:</p>
 
-<pre><code>site:
-  author: Gr&eacute;goire Pineau
-  title:  Foo
-  description: Bar
-</code></pre>
+<pre class="yaml" style="font-family:monospace;"><span style="color: #007F45;">site</span>:<span style="color: green;">
+  author</span><span style="font-weight: bold; color: brown;">: </span>Grégoire Pineau<span style="color: green;">
+  title</span><span style="font-weight: bold; color: brown;">: </span> Foo<span style="color: green;">
+  description</span><span style="font-weight: bold; color: brown;">: </span>Bar</pre>
 
 <p>And in the template:</p>
 
-<pre><code>&lt;html&gt;
+<pre class="twig" style="font-family:monospace;">&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;{{ site.title }}&lt;/title&gt;
-</code></pre></li>
+    &lt;title&gt;<span style="color: #008000;"><span style="color: #D36900;">&#123;</span><span style="color: #D36900;">&#123;</span></span> <span style="color: #00aaff;">site</span><span style="color: #D36900;">.</span><a href="http://twig.sensiolabs.org/doc/filters/title.html"><span style="color: #008000;">title</span></a> <span style="color: #008000;"><span style="color: #D36900;">&#125;</span><span style="color: #D36900;">&#125;</span></span>&lt;/title&gt;</pre></li>
 </ul><h3 id="usage">Usage<a href="#usage" class="anchor">#</a></h3>
 
 <h4 id="build-the-site">Build the site<a href="#build-the-site" class="anchor">#</a></h4>
 
 <p>In order to build the site, you can use the <code>carew:build</code> command:</p>
 
-<pre><code>$ vendor/bin/carew carew:build
-</code></pre>
+<pre class="bash" style="font-family:monospace;"><span style="color: #666666;">$ </span>vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew carew:build</pre>
 
 <p>This will populate the <code>web</code> directory with a set of files that can be
 deployed onto any static web server.</p>
 
 <p>You can change input / ouput directory. Run:</p>
 
-<pre><code>$ vendor/bin/carew help carew:build
-</code></pre>
+<pre class="bash" style="font-family:monospace;"><span style="color: #666666;">$ </span>vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew <span style="color: #7a0874; font-weight: bold;">help</span> carew:build</pre>
 
 <h4 id="create-a-new-blog-post">Create a new blog post<a href="#create-a-new-blog-post" class="anchor">#</a></h4>
 
 <p>Just run:</p>
 
-<pre><code>$ vendor/bin/carew carew:generate:post [--date="..."] title
-</code></pre>
+<pre class="bash" style="font-family:monospace;"><span style="color: #666666;">$ </span>vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew carew:generate:post <span style="color: #7a0874; font-weight: bold;">&#91;</span>--date=<span style="color: #ff0000;">&quot;...&quot;</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> title</pre>
 
 <h2 id="demo">Demo<a href="#demo" class="anchor">#</a></h2>
 
