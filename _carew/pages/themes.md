@@ -7,23 +7,25 @@ navigation: main
 Existing Themes
 ---------------
 
-* [twitter bootstrap](http://github.com/carew/theme-bootstrap/)
+* [Twitter bootstrap](http://github.com/carew/theme-bootstrap/)
 
-Usage
------
+Installation
+------------
 
-You can use themes (default layouts and/or assets).
-Thanks to twig, you just have to give the path to themes folder
-in the `config.yml` file
+You can use as many themes as you want.
+Themes are default layouts and / or assets.
 
-    yaml
-    #config.yml
-    engine:
-        themes:
-            - %dir%/vendor/carew/theme-bootstrap
+1. Add the dependancy with composer.
+
+1. Register theme in the `config.yml` file:
+
+        yaml
+        #config.yml
+        engine:
+            themes:
+                - %dir%/vendor/carew/theme-bootstrap
 
 Theme folder can contain `layouts` and `assets` folders.
-
 
 Customization
 -------------
@@ -44,3 +46,12 @@ You can also inherit the original one with `extends`:
             </li>
         </ul>
     {% endblock %}
+
+You have created a theme
+------------------------
+
+You have created a theme and you want to share it ?
+Write me an [email](mailto:lyrixx@lyrixx.info) and I will open a new repository on
+[github/carew](https://github.com/carew) for you, or send me a
+[pull request](https://github.com/carew/carew.github.com/edit/master/_carew/pages/themes.md)
+and add a new link.

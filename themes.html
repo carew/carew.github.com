@@ -43,8 +43,9 @@
                   <div class="nav-collapse collapse">
                         <ul class="nav">
                                     <li><a href="#existing-themes">Existing Themes</a></li>
-                            <li><a href="#usage">Usage</a></li>
+                            <li><a href="#installation">Installation</a></li>
                             <li><a href="#customization">Customization</a></li>
+                            <li><a href="#you-have-created-a-theme">You have created a theme</a></li>
                              <li class="divider-vertical"></li>
                               <ul class="nav">
                                                                                                             <li><a href="./plugins.html">Plugins</a></li>
@@ -112,19 +113,20 @@
                               
               <h2 id="existing-themes">Existing Themes<a href="#existing-themes" class="anchor">#</a></h2>
 
-<ul><li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
-</ul><h2 id="usage">Usage<a href="#usage" class="anchor">#</a></h2>
+<ul><li><a href="http://github.com/carew/theme-bootstrap/">Twitter bootstrap</a></li>
+</ul><h2 id="installation">Installation<a href="#installation" class="anchor">#</a></h2>
 
-<p>You can use themes (default layouts and/or assets).
-Thanks to twig, you just have to give the path to themes folder
-in the <code>config.yml</code> file</p>
+<p>You can use as many themes as you want.
+Themes are default layouts and / or assets.</p>
+
+<ol><li><p>Add the dependancy with composer.</p></li>
+<li><p>Register theme in the <code>config.yml</code> file:</p>
 
 <pre class="yaml" style="font-family:monospace;"><span style="color: blue;">#config.yml</span><span style="color: #007F45;">
 engine</span>:<span style="color: #007F45;">
     themes</span><span style="font-weight: bold; color: brown;">:
-</span>        - <span style="font-weight: bold; color: red;">%dir%/vendor/carew/theme-bootstrap</span></pre>
-
-<p>Theme folder can contain <code>layouts</code> and <code>assets</code> folders.</p>
+</span>        - <span style="font-weight: bold; color: red;">%dir%/vendor/carew/theme-bootstrap</span></pre></li>
+</ol><p>Theme folder can contain <code>layouts</code> and <code>assets</code> folders.</p>
 
 <h2 id="customization">Customization<a href="#customization" class="anchor">#</a></h2>
 
@@ -142,7 +144,15 @@ directory with the same name as the original one.</p>
             ...
         &lt;/li&gt;
     &lt;/ul&gt;
-<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/endblock.html"><span style="color: #0600FF;">endblock</span></a> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span></pre>            </div>
+<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/endblock.html"><span style="color: #0600FF;">endblock</span></a> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span></pre>
+
+<h2 id="you-have-created-a-theme">You have created a theme<a href="#you-have-created-a-theme" class="anchor">#</a></h2>
+
+<p>You have created a theme and you want to share it ?
+Write me an <a href="mailto:lyrixx@lyrixx.info">email</a> and I will open a new repository on
+<a href="https://github.com/carew">github/carew</a> for you, or send me a
+<a href="https://github.com/carew/carew.github.com/edit/master/_carew/pages/themes.md">pull request</a>
+and add a new link.</p>            </div>
           </div>
         
                   <footer>

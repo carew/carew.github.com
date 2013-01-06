@@ -42,9 +42,10 @@
                   <a class="brand" href=".">Carew</a>
                   <div class="nav-collapse collapse">
                         <ul class="nav">
-                                    <li><a href="#usage">Usage</a></li>
-                            <li><a href="#existing-plugins">Existing Plugins</a></li>
+                                    <li><a href="#existing-plugins">Existing Plugins</a></li>
+                            <li><a href="#installation">Installation</a></li>
                             <li><a href="#how-to-write-a-plugin">How to write a plugin</a></li>
+                            <li><a href="#you-have-created-a-plugin">You have created a plugin</a></li>
                              <li class="divider-vertical"></li>
                               <ul class="nav">
                                                                                                             <li class="active"><a href="./plugins.html">Plugins</a></li>
@@ -110,23 +111,24 @@
                     <h1>Plugins</h1>
                   </div>
                               
-              <h2 id="usage">Usage<a href="#usage" class="anchor">#</a></h2>
+              <h2 id="existing-plugins">Existing Plugins<a href="#existing-plugins" class="anchor">#</a></h2>
 
-<p>You can use as many plugin as you want. You just
-have to register class to register in the <code>config.yml</code> file</p>
+<ul><li><a href="https://github.com/carew/plugin-toc">TOC Builder</a>: Build a Table Of Content</li>
+<li><a href="https://github.com/carew/plugin-highlight">HighLighter</a>: Highligh your code</li>
+</ul><h2 id="installation">Installation<a href="#installation" class="anchor">#</a></h2>
+
+<p>You can use as many plugin as you want.</p>
+
+<ol><li><p>Add the dependancy with composer.</p></li>
+<li><p>Register theme in the <code>config.yml</code> file:</p>
 
 <pre class="yaml" style="font-family:monospace;"><span style="color: blue;">#config.yml</span><span style="color: #007F45;">
 engine</span>:<span style="color: #007F45;">
     extensions</span><span style="font-weight: bold; color: brown;">:
-</span>        - Carew\Plugin\Toc\TocExtension</pre>
+</span>        - Carew\Plugin\Toc\TocExtension</pre></li>
+</ol><p>That's it.</p>
 
-<p>That's it.</p>
-
-<h2 id="existing-plugins">Existing Plugins<a href="#existing-plugins" class="anchor">#</a></h2>
-
-<ul><li><a href="https://github.com/carew/plugin-toc">TOC Builder</a>: Build a Table Of Content</li>
-<li><a href="https://github.com/carew/plugin-highlight">HighLighter</a>: Highligh your code</li>
-</ul><h2 id="how-to-write-a-plugin">How to write a plugin<a href="#how-to-write-a-plugin" class="anchor">#</a></h2>
+<h2 id="how-to-write-a-plugin">How to write a plugin<a href="#how-to-write-a-plugin" class="anchor">#</a></h2>
 
 <p>The plugin must implements <code>ExtensionInterface</code>.</p>
 
@@ -138,7 +140,15 @@ to the extension. So the plugin can alter everything.</p>
 <ul><li>The <code>carew</code> instance, of source</li>
 <li>The <code>container</code>, an instance of <a href="http://pimple.sensiolabs.org/">pimple</a>.</li>
 <li>The <code>event_dispatcher</code>, an instance of <a href="https://github.com/symfony/EventDispatcher">Symfony EventDispatcher</a>.</li>
-</ul><p>You can have a look to the <code>CoreExtension</code> for more information.</p>            </div>
+</ul><p>You can have a look to the <code>CoreExtension</code> for more information.</p>
+
+<h2 id="you-have-created-a-plugin">You have created a plugin<a href="#you-have-created-a-plugin" class="anchor">#</a></h2>
+
+<p>You have created a plugin and you want to share it ?
+Write me an <a href="mailto:lyrixx@lyrixx.info">email</a> and I will open a new repository on
+<a href="https://github.com/carew">github/carew</a> for you, or send me a
+<a href="https://github.com/carew/carew.github.com/edit/master/_carew/pages/plugins.md">pull request</a>
+and add a new link.</p>            </div>
           </div>
         
                   <footer>

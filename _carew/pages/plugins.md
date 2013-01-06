@@ -4,25 +4,28 @@ layout: doc
 navigation: main
 ---
 
-Usage
------
-
-You can use as many plugin as you want. You just
-have to register class to register in the `config.yml` file
-
-    yaml
-    #config.yml
-    engine:
-        extensions:
-            - Carew\Plugin\Toc\TocExtension
-
-That's it.
-
 Existing Plugins
 ----------------
 
 * [TOC Builder](https://github.com/carew/plugin-toc): Build a Table Of Content
 * [HighLighter](https://github.com/carew/plugin-highlight): Highligh your code
+
+Installation
+------------
+
+You can use as many plugin as you want.
+
+1. Add the dependancy with composer.
+
+1. Register theme in the `config.yml` file:
+
+        yaml
+        #config.yml
+        engine:
+            extensions:
+                - Carew\Plugin\Toc\TocExtension
+
+That's it.
 
 How to write a plugin
 ---------------------
@@ -40,3 +43,11 @@ The plugin can access to:
 
 You can have a look to the `CoreExtension` for more information.
 
+You have created a plugin
+-------------------------
+
+You have created a plugin and you want to share it ?
+Write me an [email](mailto:lyrixx@lyrixx.info) and I will open a new repository on
+[github/carew](https://github.com/carew) for you, or send me a
+[pull request](https://github.com/carew/carew.github.com/edit/master/_carew/pages/plugins.md)
+and add a new link.
