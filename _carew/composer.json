@@ -14,7 +14,8 @@
         "carew/carew": "*",
         "carew/theme-bootstrap": "*",
         "carew/plugin-toc": "*",
-        "carew/plugin-highlight": "*"
+        "carew/plugin-highlight": "*",
+        "lyrixx/my-theme-bootstrap": "*"
     },
     "minimum-stability": "dev"
 }

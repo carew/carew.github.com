@@ -1,12 +1,15 @@
 site:
-    title: Carew
-    description: The tiny website generator
-    author_name: Grégoire Pineau
+    title:        Carew
+    description:  The tiny website generator
+    author_name:  Grégoire Pineau
     author_email: lyrixx@lyrixx.info
-    author_url: http://greogirepineau.fr
+    author_url:   http://gregoirepineau.fr
+    gh_url:       https://github.com/carew/carew
 
 engine:
-    theme_path: %dir%/vendor/carew/theme-bootstrap
+    themes:
+        - %dir%/vendor/lyrixx/my-theme-bootstrap
+        - %dir%/vendor/carew/theme-bootstrap
     extensions:
         - Carew\Plugin\Toc\TocExtension
         - Carew\Plugin\Highlight\HighlightExtension
