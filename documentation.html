@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Documentation</title>
+
+    <meta name="description" content="The tiny website generator">
+    <meta name="author" content="Grégoire Pineau">
+    <meta name="viewport" content="width=device-width">
+
+    
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/highlight.css">
+
+    
+    <script src="./js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+      <a href="https://github.com/carew/carew" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:10000" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+          <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+              <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href=".">Carew</a>
+                  <div class="nav-collapse collapse">
+                        <ul class="nav">
+                                    <li><a href="#structure">Structure</a></li>
+                            <li><a href="#usage">Usage</a></li>
+                             <li class="divider-vertical"></li>
+                              <ul class="nav">
+                                                                                                            <li class="active"><a href="./documentation.html">Documentation</a></li>
+                                                                                                                <li><a href="./plugins.html">Plugins</a></li>
+                                                                                                                <li><a href="./themes.html">Themes</a></li>
+                                                                                                    </ul>
+                    
+    </ul>
+                      <ul class="nav pull-right">
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Other OSS project">
+        Lyrixx
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="http://github.com/lyrixx/Silex-Kitchen-Edition" target="_blank">
+            Silex Kitchen Edition
+          </a>
+        </li>
+        <li>
+          <a href="http://github.com/lyrixx/lifestream" target="_blank">
+            Lifestream
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li class="nav-header">Follow me on</li>
+        <li>
+          <a href="http://github.com/lyrixx" target="_blank">
+            Github
+          </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/lyrixx" target="_blank">
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="http://gregoirepineau.fr" target="_blank">
+            My Personal Homepage
+          </a>
+        </li>
+        <li>
+          <a href="http://gregoirepineau.fr" target="_blank">
+            My Blog
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    
+    
+          <div class="container">
+
+        
+                  <div class="row">
+            <div class="span10 offset1 content">
+                                                <div class="page-header">
+                    <h1>Documentation <small>For the end user</small></h1>
+                  </div>
+                              
+              <h2 id="structure">Structure<a href="#structure" class="anchor">#</a></h2>
+
+<p>Now you can use the following directories:</p>
+
+<ul><li><p><strong>assets:</strong> All of these files will be copied to the web directory. You can
+add JavaScript, CSS and images in here.</p></li>
+<li><p><strong>layouts:</strong> The layouts are used to render the pages. They have a
+<code>.html.twig</code> suffix. You can create base templates and have more specific
+ones that extend them using the <code>extends</code> tag. The layouts are renderer
+with <a href="http://twig.sensiolabs.com">Twig</a></p>
+
+<p>Layouts get access to following variables:</p>
+
+<ul><li><strong>currentPath</strong>: The current path, from the root to the current page.</li>
+<li><strong>document</strong>: The current document to render.
+A document has <code>title</code>, <code>body</code> and any additional front-matter meta data
+in <code>metadatas</code>. <code>body</code> contains the body rendered as html. For more property,
+look at <code>Document</code> class.</li>
+<li><strong>latest</strong>: The latest post.</li>
+<li><strong>navigation</strong>: A listing of all navigation groups with theirs associated
+pages/posts collection. Useful in templates to build menu.</li>
+<li><strong>pages</strong>: A listing of all pages.</li>
+<li><strong>posts</strong>: A listing of all posts in reverse order of publication.</li>
+<li><strong>relativeRoot</strong>: The relative path from the current page to the root. Useful
+for referencing assets. Must always be followed by a slash, e.g.:
+<code>{{ relativeRoot }}/main.css</code>.</li>
+<li><strong>tags</strong>: A listing of all tags with theirs associated pages/posts collection.</li>
+</ul><p>Filenames that follow the <code>index.$format.twig</code> naming scheme will get compiled
+to an <code>index.$format</code> file.
+<strong>Note:</strong> You can also create an <code>index.md</code> file in <code>pages</code> directory.</p>
+
+<p>Filenames that follow the <code>tags.$format.twig</code> naming scheme will get compiled
+to <code>tags/$tagName.$format</code> files. Templates have access to <code>tag</code> and <code>posts</code>
+variables. Here <code>posts</code> contains only Posts with current tag</p></li>
+<li><p><strong>posts:</strong> Markdown files representing blog posts. Must be in the format of
+<code>YYYY-mm-dd-slug.md</code>, e.g. <code>2012-09-20-like-a-hacker.md</code>. Each one must begin
+with a YAML front matter. Here is a sample blog post:</p>
+
+<pre><code>---
+layout: post
+title: Blogging Like a Hacker
+---
+
+# Blogging Like a Hacker
+
+* I&rsquo;m bloggin yo!
+* ORLY?
+* YARLY!
+</code></pre>
+
+<p>The following fields are defined:</p>
+
+<ul><li><strong>title:</strong> Title of the blog post for display on the index.</li>
+<li><strong>layout:</strong> Layout to be used for rendering this post. Defaults to <code>default</code>,
+which means <code>layouts/default.html.twig</code> is rendered unless specified
+otherwise.</li>
+</ul><p>You can add more fields and used them in the template, under the
+<code>document.metadata</code> variable.</p></li>
+<li><p><strong>pages:</strong> Markdown files representing pages. Each one must begin
+with a YAML front matter. Here is a sample page:</p>
+
+<pre><code>---
+layout: page
+title: About
+---
+
+# About me
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</code></pre>
+
+<p>You can add more fields and used them in the template, under the
+<code>document.metadata</code> variable.</p></li>
+<li><p><strong>api</strong>: Markdown, or not, files. Each one will be rendered in <code>/api/filename.html</code>.</p></li>
+<li><p><strong>config.yml:</strong> Yaml file with some configuration. All variables unde <code>site</code>
+will be sent to twig templates. Here is a sample:</p>
+
+<pre class="yaml" style="font-family:monospace;"><span style="color: #007F45;">site</span>:<span style="color: green;">
+  author</span><span style="font-weight: bold; color: brown;">: </span>Grégoire Pineau<span style="color: green;">
+  title</span><span style="font-weight: bold; color: brown;">: </span> Foo<span style="color: green;">
+  description</span><span style="font-weight: bold; color: brown;">: </span>Bar</pre>
+
+<p>And in the template:</p>
+
+<pre class="twig" style="font-family:monospace;">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;<span style="color: #008000;"><span style="color: #D36900;">&#123;</span><span style="color: #D36900;">&#123;</span></span> <span style="color: #00aaff;">site</span><span style="color: #D36900;">.</span><a href="http://twig.sensiolabs.org/doc/filters/title.html"><span style="color: #008000;">title</span></a> <span style="color: #008000;"><span style="color: #D36900;">&#125;</span><span style="color: #D36900;">&#125;</span></span>&lt;/title&gt;</pre></li>
+</ul><h2 id="usage">Usage<a href="#usage" class="anchor">#</a></h2>
+
+<h3 id="build-the-site">Build the site<a href="#build-the-site" class="anchor">#</a></h3>
+
+<p>In order to build the site, you can use the <code>carew:build</code> command:</p>
+
+<pre class="bash" style="font-family:monospace;"><span style="color: #666666;">$ </span>vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew carew:build</pre>
+
+<p>This will populate the <code>web</code> directory with a set of files that can be
+deployed onto any static web server.</p>
+
+<p>You can change input / ouput directory. Run:</p>
+
+<pre class="bash" style="font-family:monospace;"><span style="color: #666666;">$ </span>vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew <span style="color: #7a0874; font-weight: bold;">help</span> carew:build</pre>
+
+<h3 id="create-a-new-blog-post">Create a new blog post<a href="#create-a-new-blog-post" class="anchor">#</a></h3>
+
+<p>Just run:</p>
+
+<pre class="bash" style="font-family:monospace;"><span style="color: #666666;">$ </span>vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew carew:generate:post <span style="color: #7a0874; font-weight: bold;">&#91;</span>--date=<span style="color: #ff0000;">&quot;...&quot;</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> title</pre>            </div>
+          </div>
+        
+                  <footer>
+            <p>
+              &copy;
+              <a href="">
+                Grégoire Pineau
+              </a>
+              2013
+              <small>
+                with help from <a href="https://github.com/lyrixx/Carew" target="_blank">Carew</a>
+                and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+              </small>
+            </p>
+          </footer>
+              </div>
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="./js/vendor/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+      </body>
+</html>
