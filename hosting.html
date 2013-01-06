@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Carew</title>
+    <title>Hosting</title>
 
     <meta name="description" content="The tiny website generator">
     <meta name="author" content="Grégoire Pineau">
@@ -46,14 +46,11 @@
                                                                                                             <li><a href="./documentation.html">Documentation</a></li>
                                                                                                                 <li><a href="./plugins.html">Plugins</a></li>
                                                                                                                 <li><a href="./themes.html">Themes</a></li>
-                                                                                                                <li><a href="./hosting.html">Hosting</a></li>
+                                                                                                                <li class="active"><a href="./hosting.html">Hosting</a></li>
                                                                                                     </ul>
                     
          <li class="divider-vertical"></li>
-                                    <li><a href="#what-is-it-">What is it?</a></li>
-                            <li><a href="#installation">Installation</a></li>
-                            <li><a href="#demo">Demo</a></li>
-                            <li><a href="#why-another-one-">Why another one?</a></li>
+                                    <li><a href="#github">Github</a></li>
                         </ul>
                       <ul class="nav pull-right">
     <li class="dropdown">
@@ -109,46 +106,40 @@
                   <div class="row">
             <div class="span10 offset1 content">
                                                 <div class="page-header">
-                    <h1>Carew <small>The tiny website generator</small></h1>
+                    <h1>Hosting</h1>
                   </div>
                               
-              <h2 id="what-is-it-">What is it?<a href="#what-is-it-" class="anchor">#</a></h2>
+              <h2 id="github">Github<a href="#github" class="anchor">#</a></h2>
 
-<p><strong>Carew</strong> is another static site / blog generator.
-Write some blog post in <a href="http://daringfireball.net/projects/markdown/">markdown</a>,
-carew will render them in html.</p>
+<p>How to host carew on github ?</p>
 
-<h2 id="installation">Installation<a href="#installation" class="anchor">#</a></h2>
+<p><a href="https://github.com">Github</a> can host <a href="http://pages.github.com/">static pages</a>.
+It's very easy thanks to carew.</p>
 
-<p>The best way to start with carew, it's with the carew boilerplate:
-You will need <a href="http://getcomposer.org">composer</a>.</p>
+<p>Start by creating a new project with <a href="http://getcomposer.org">composer</a>:</p>
 
-<pre class="bash" style="font-family:monospace;">$ php composer.phar create-project carew<span style="color: #000000; font-weight: bold;">/</span>boilerplate my_website
-$ <span style="color: #7a0874; font-weight: bold;">cd</span> my_website
-$ vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew carew:build</pre>
+<pre class="bash" style="font-family:monospace;">$ <span style="color: #c20cb9; font-weight: bold;">mkdir</span> my_site
+$ <span style="color: #7a0874; font-weight: bold;">cd</span> my_site
+$ <span style="color: #c20cb9; font-weight: bold;">git init</span>
+$ <span style="color: #c20cb9; font-weight: bold;">git</span> <span style="color: #c20cb9; font-weight: bold;">co</span> <span style="color: #660033;">-b</span> gh-pages
+$ php composer.phar create-project carew<span style="color: #000000; font-weight: bold;">/</span>boilerplate _carew</pre>
 
-<p>That's all.</p>
+<p>To make it more simple to build your website, you can setup a <code>build.sh</code> script
+in <code>_carew</code> folder:</p>
 
-<h2 id="demo">Demo<a href="#demo" class="anchor">#</a></h2>
+<pre class="bash" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">#!/bin/bash</span>
+<span style="color: #007800;">BASE</span>=<span style="color: #000000; font-weight: bold;">`</span><span style="color: #c20cb9; font-weight: bold;">dirname</span> <span style="color: #007800;">$0</span><span style="color: #000000; font-weight: bold;">`</span>
+<span style="color: #007800;">$BASE</span><span style="color: #000000; font-weight: bold;">/</span>vendor<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span>carew carew:build <span style="color: #660033;">--base-dir</span>=<span style="color: #007800;">$BASE</span> <span style="color: #660033;">--web-dir</span>=<span style="color: #007800;">$BASE</span><span style="color: #000000; font-weight: bold;">/</span>..</pre>
 
-<p>Do you want to see it in action? This doc uses carew ;)
-Have a look to the <a href="https://github.com/carew/carew.github.com/tree/master/_carew">codebase</a>.</p>
+<p>Then you can build the website with <code>_carew/build.sh</code> command.
+Now, you can commit and push everythings to your github repo:</p>
 
-<h2 id="why-another-one-">Why another one?<a href="#why-another-one-" class="anchor">#</a></h2>
+<pre class="bash" style="font-family:monospace;"><span style="color: #c20cb9; font-weight: bold;">git add</span> .
+<span style="color: #c20cb9; font-weight: bold;">git commit</span> <span style="color: #660033;">-m</span> <span style="color: #ff0000;">&quot;Inital commit&quot;</span>
+<span style="color: #c20cb9; font-weight: bold;">git remote</span> add origin <span style="color: #c20cb9; font-weight: bold;">git</span><span style="color: #000000; font-weight: bold;">@</span>github.com:YOUR_NAME<span style="color: #000000; font-weight: bold;">/</span>YOUR_REPO.git
+<span style="color: #c20cb9; font-weight: bold;">git push</span> origin gh-pages <span style="color: #660033;">-u</span></pre>
 
-<p>I used to used <a href="https://github.com/mojombo/jekyll">jekyll</a>, but I was very unhappy with
-the templating engine. And then, I discovered
-<a href="https://github.com/igorw/balrog/tree/8ed377d4eb1759926d8cfceb1796ed4234dceaef">balrog</a>.
-I was very cool but <a href="https://github.com/igorw/balrog/">igor</a> took
-another direction. So I fork it, and carew was born.</p>
-
-<h3 id="why-this-name-">Why this name?<a href="#why-this-name-" class="anchor">#</a></h3>
-
-<p>Like to all other tatic site / blog generator (<a href="https://github.com/mojombo/jekyll">jekyll</a>,
-<a href="https://github.com/hyde/hyde">hyde</a>, <a href="https://github.com/obensonne/poole">pool</a>,
-<a href="https://github.com/spjwebster/lanyon">lanyon</a>), its name come from the
-<em><a href="http://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde">Strange Case of Dr Jekyll and Mr Hyde</a></em>
-story.</p>            </div>
+<p>Now, you can browse <code>https://YOUR_NAME.github.com/YOU_REPO</code></p>            </div>
           </div>
         
                   <footer>
