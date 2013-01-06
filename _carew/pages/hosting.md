@@ -38,4 +38,4 @@ Now, you can commit and push everythings to your github repo:
     $ git remote add origin git@github.com:YOUR_NAME/YOUR_REPO.git
     $ git push origin gh-pages -u
 
-Now, you can browse `https://YOUR_NAME.github.com/YOU_REPO`
+Now, you can browse `http://YOUR_NAME.github.com/YOU_REPO`

@@ -135,7 +135,7 @@ pages/posts collection. Useful in templates to build menu.</li>
 <li><strong>posts</strong>: A listing of all posts in reverse order of publication.</li>
 <li><strong>relativeRoot</strong>: The relative path from the current page to the root. Useful
 for referencing assets. Must always be followed by a slash, e.g.:
-<code>{{ relativeRoot }}/main.css</code>.</li>
+<code>./main.css</code>.</li>
 <li><strong>tags</strong>: A listing of all tags with theirs associated pages/posts collection.</li>
 </ul><p>Filenames that follow the <code>index.$format.twig</code> naming scheme will get compiled
 to an <code>index.$format</code> file.
@@ -227,13 +227,12 @@ deployed onto any static web server.</p>
                   <footer>
             <p>
               &copy;
-              <a href="">
-                Grégoire Pineau
-              </a>
-              2013
+                              <a href="http://gregoirepineau.fr">
+                  Grégoire Pineau
+                </a>
+                            2013
               <small>
-                with help from <a href="https://github.com/lyrixx/Carew" target="_blank">Carew</a>
-                and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+                with help from <a href="http://carew.github.com/" target="_blank">Carew</a>
               </small>
             </p>
           </footer>
