@@ -33,9 +33,9 @@ Then you can build the website with `_carew/build.sh` command.
 Now, you can commit and push everythings to your github repo:
 
     bash
-    git add .
-    git commit -m "Inital commit"
-    git remote add origin git@github.com:YOUR_NAME/YOUR_REPO.git
-    git push origin gh-pages -u
+    $ git add .
+    $ git commit -m "Inital commit"
+    $ git remote add origin git@github.com:YOUR_NAME/YOUR_REPO.git
+    $ git push origin gh-pages -u
 
 Now, you can browse `https://YOUR_NAME.github.com/YOU_REPO`
