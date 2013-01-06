@@ -106,6 +106,8 @@ Now you can use the following directories:
           <head>
             <title>{{ site.title }}</title>
 
+**Note:** You can use `{{ relative Root }}` (without space between `relative` and `Root`) to point the relative root in all .md files.
+
 Usage
 -----
 
