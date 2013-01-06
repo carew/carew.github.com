@@ -154,13 +154,8 @@ Just run:
 Demo
 ----
 
-You want to see it in action? This doc uses carew ;)
-Have a look to the [codebase](https://github.com/carew/carew.github.com/tree/master/_carew)
-
-Want to contribute?
--------------------
-
-Please, [fork me](https://github.com/carew/carew) and send me a pull request :)
+Do you want to see it in action? This doc uses carew ;)
+Have a look to the [codebase](https://github.com/carew/carew.github.com/tree/master/_carew).
 
 Why another one?
 ----------------
@@ -171,33 +166,10 @@ the templating engine. And then, I discovered
 I was very cool but [igor](https://github.com/igorw/balrog/) took
 another direction. So I fork it, and carew was born.
 
-Why Carew?
+### Why this name?
 
 Like to all other tatic site / blog generator ([jekyll](https://github.com/mojombo/jekyll),
 [hyde](https://github.com/hyde/hyde), [pool](https://github.com/obensonne/poole),
 [lanyon](https://github.com/spjwebster/lanyon)), its name come from the
 *[Strange Case of Dr Jekyll and Mr Hyde](http://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde)*
 story.
-
-Licence
--------
-
-    Copyright (c) 2013 Grégoire Pineau
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is furnished
-    to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
