@@ -4,27 +4,38 @@ layout: doc
 navigation: main
 ---
 
+Existing Themes
+---------------
+
+* [twitter bootstrap](http://github.com/carew/theme-bootstrap/)
+
 Usage
 -----
 
-You can use themes (default layouts). Thanks to twig, you just
-have to give the path to templates in the `config.yml` file
+You can use themes (default layouts and/or assets).
+Thanks to twig, you just have to give the path to themes folder
+in the `config.yml` file
 
     yaml
     #config.yml
     engine:
-        theme_path: %dir%/vendor/carew/theme-bootstrap
+        themes:
+            - %dir%/vendor/carew/theme-bootstrap
 
-Then you can customize all templates.
+Theme folder can contain `layouts` and `assets` folders.
 
-Create a new template in your `layouts` directory with the same
-name as the original one.
 
-You can also inherit original template with `extends`:
+Customization
+-------------
+
+If you want to replace a template, create a new template in your `layouts`
+directory with the same name as the original one.
+
+You can also inherit the original one with `extends`:
 
     twig
     # my_project/layouts/default.html.twig
-    {% extends 'vendor/carew/theme-bootstrap/layouts/index.atom.twig'%}
+    {% extends 'vendor/carew/theme-bootstrap/layouts/index.html.twig'%}
 
     {% block nav_right %}
         <ul class="nav pull-right">
@@ -33,8 +44,3 @@ You can also inherit original template with `extends`:
             </li>
         </ul>
     {% endblock %}
-
-Existing Themes
----------------
-
-* [twitter bootstrap](http://github.com/carew/theme-bootstrap/)

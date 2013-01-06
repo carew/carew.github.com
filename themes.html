@@ -42,8 +42,9 @@
                   <a class="brand" href=".">Carew</a>
                   <div class="nav-collapse collapse">
                         <ul class="nav">
-                                    <li><a href="#usage">Usage</a></li>
-                            <li><a href="#existing-themes">Existing Themes</a></li>
+                                    <li><a href="#existing-themes">Existing Themes</a></li>
+                            <li><a href="#usage">Usage</a></li>
+                            <li><a href="#customization">Customization</a></li>
                              <li class="divider-vertical"></li>
                               <ul class="nav">
                                                                                                             <li><a href="./plugins.html">Plugins</a></li>
@@ -109,24 +110,31 @@
                     <h1>Themes</h1>
                   </div>
                               
-              <h2 id="usage">Usage<a href="#usage" class="anchor">#</a></h2>
+              <h2 id="existing-themes">Existing Themes<a href="#existing-themes" class="anchor">#</a></h2>
 
-<p>You can use themes (default layouts). Thanks to twig, you just
-have to give the path to templates in the <code>config.yml</code> file</p>
+<ul><li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
+</ul><h2 id="usage">Usage<a href="#usage" class="anchor">#</a></h2>
+
+<p>You can use themes (default layouts and/or assets).
+Thanks to twig, you just have to give the path to themes folder
+in the <code>config.yml</code> file</p>
 
 <pre class="yaml" style="font-family:monospace;"><span style="color: blue;">#config.yml</span><span style="color: #007F45;">
-engine</span>:<span style="color: green;">
-    theme_path</span><span style="font-weight: bold; color: brown;">: </span><span style="font-weight: bold; color: red;">%dir%/vendor/carew/theme-bootstrap</span></pre>
+engine</span>:<span style="color: #007F45;">
+    themes</span><span style="font-weight: bold; color: brown;">:
+</span>        - <span style="font-weight: bold; color: red;">%dir%/vendor/carew/theme-bootstrap</span></pre>
 
-<p>Then you can customize all templates.</p>
+<p>Theme folder can contain <code>layouts</code> and <code>assets</code> folders.</p>
 
-<p>Create a new template in your <code>layouts</code> directory with the same
-name as the original one.</p>
+<h2 id="customization">Customization<a href="#customization" class="anchor">#</a></h2>
 
-<p>You can also inherit original template with <code>extends</code>:</p>
+<p>If you want to replace a template, create a new template in your <code>layouts</code>
+directory with the same name as the original one.</p>
+
+<p>You can also inherit the original one with <code>extends</code>:</p>
 
 <pre class="twig" style="font-family:monospace;"># my_project/layouts/default.html.twig
-<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/extends.html"><span style="color: #0600FF;">extends</span></a> <span style="color: #ff0000;">'vendor/carew/theme-bootstrap/layouts/index.atom.twig'</span><span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span>
+<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/extends.html"><span style="color: #0600FF;">extends</span></a> <span style="color: #ff0000;">'vendor/carew/theme-bootstrap/layouts/index.html.twig'</span><span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span>
 &nbsp;
 <span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/block.html"><span style="color: #0600FF;">block</span></a> <span style="color: #00aaff;">nav_right</span> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span>
     &lt;ul class=&quot;nav pull-right&quot;&gt;
@@ -134,12 +142,7 @@ name as the original one.</p>
             ...
         &lt;/li&gt;
     &lt;/ul&gt;
-<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/endblock.html"><span style="color: #0600FF;">endblock</span></a> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span></pre>
-
-<h2 id="existing-themes">Existing Themes<a href="#existing-themes" class="anchor">#</a></h2>
-
-<ul><li><a href="http://github.com/carew/theme-bootstrap/">twitter bootstrap</a></li>
-</ul>            </div>
+<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/endblock.html"><span style="color: #0600FF;">endblock</span></a> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span></pre>            </div>
           </div>
         
                   <footer>
