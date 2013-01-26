@@ -7,8 +7,9 @@ navigation: main
 Existing Plugins
 ----------------
 
-* [TOC Builder](https://github.com/carew/plugin-toc): Build a Table Of Content
-* [HighLighter](https://github.com/carew/plugin-highlight): Highligh your code
+* [TOC Builder](https://github.com/carew/plugin-toc#readme): Build a Table Of Content
+* [HighLighter](https://github.com/carew/plugin-highlight#readme): Highligh your code
+* [Sami](https://github.com/carew/plugin-sami#readme): Build api doc from carew
 
 Installation
 ------------
