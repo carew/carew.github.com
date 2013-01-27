@@ -11,11 +11,13 @@
         }
     ],
     "require": {
-        "carew/carew": "*",
-        "carew/theme-bootstrap": "*",
-        "carew/plugin-toc": "*",
-        "carew/plugin-highlight": "*",
-        "lyrixx/my-theme-bootstrap": "*"
+        "carew/carew"               : "dev-master",
+        "carew/theme-bootstrap"     : "dev-master",
+        "carew/plugin-toc"          : "dev-master",
+        "carew/plugin-pagination"   : "dev-master",
+        "carew/plugin-highlight"    : "dev-master",
+        "carew/plugin-sami"         : "dev-master",
+        "lyrixx/my-theme-bootstrap" : "dev-master"
     },
     "minimum-stability": "dev"
 }
