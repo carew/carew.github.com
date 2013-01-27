@@ -1,6 +1,6 @@
 ---
 title: Themes
-layout: doc
+layout: doc2
 navigation: main
 ---
 
