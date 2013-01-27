@@ -13,3 +13,12 @@ engine:
     extensions:
         - Carew\Plugin\Toc\TocExtension
         # - Carew\Plugin\Highlight\HighlightExtension
+        - Carew\Plugin\Pagination\PaginationExtension
+        - Carew\Plugin\Sami\SamiExtension
+
+sami:
+    project_dir: /home/greg/dev/perso/carew
+    src_dir:     Carew
+    name:        Carew
+    branches:
+        master: Master
