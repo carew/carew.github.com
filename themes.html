@@ -18,9 +18,8 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/highlight.css">
 
-    
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/pojoaque.min.css">
     <script src="./js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
   </head>
 
@@ -29,8 +28,8 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
-          <a href="https://github.com/carew/carew" target="_blank"><img style="position: fixed; top: 40px; left: 0; border: 0; z-index:10000" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
-  
+                <a href="https://github.com/carew/carew" target="_blank"><img style="position: fixed; top: 40px; left: 0; border: 0; z-index:10000" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    
           <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
               <div class="container">
@@ -55,25 +54,25 @@
                             <li><a href="#customization">Customization</a></li>
                             <li><a href="#you-have-created-a-theme">You have created a theme</a></li>
                         </ul>
-                      <ul class="nav pull-right">
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Other OSS project">
-        Lyrixx
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-                          <li><a href="http://carew.github.com" target="_blank">Carew</a></li>
-                  <li><a href="http://lyrixx.github.com/Silex-Kitchen-Edition/" target="_blank">Silex Kitchen Edition</a></li>
-                  <li><a href="http://lyrixx.github.com/lifestream/" target="_blank">Lifestream</a></li>
-                  <li><a href="http://lyrixx.github.com/Series/" target="_blank">Series</a></li>
-                <li class="divider"></li>
-        <li class="nav-header">Follow me on</li>
-                          <li><a href="http://github.com/lyrixx" target="_blank">Github</a></li>
-                  <li><a href="http://twitter.com/lyrixx" target="_blank">Twitter</a></li>
-                  <li><a href="http://blog.lyrixx.info" target="_blank">Blog</a></li>
-              </ul>
-    </li>
-  </ul>
+                        <ul class="nav pull-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Other OSS project">
+                Lyrixx
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                                                    <li><a href="http://carew.github.com" target="_blank">Carew</a></li>
+                                    <li><a href="http://lyrixx.github.com/Silex-Kitchen-Edition/" target="_blank">Silex Kitchen Edition</a></li>
+                                    <li><a href="http://lyrixx.github.com/lifestream/" target="_blank">Lifestream</a></li>
+                                    <li><a href="http://lyrixx.github.com/Series/" target="_blank">Series</a></li>
+                                <li class="divider"></li>
+                <li class="nav-header">Follow me on</li>
+                                                    <li><a href="http://github.com/lyrixx" target="_blank">Github</a></li>
+                                    <li><a href="http://twitter.com/lyrixx" target="_blank">Twitter</a></li>
+                                    <li><a href="http://blog.lyrixx.info" target="_blank">Blog</a></li>
+                            </ul>
+        </li>
+    </ul>
                   </div>
               </div>
           </div>
@@ -100,10 +99,11 @@ Themes are default layouts and / or assets.</p>
 <ol><li><p>Add the dependancy with composer.</p></li>
 <li><p>Register theme in the <code>config.yml</code> file:</p>
 
-<pre class="yaml" style="font-family:monospace;"><span style="color: blue;">#config.yml</span><span style="color: #007F45;">
-engine</span>:<span style="color: #007F45;">
-    themes</span><span style="font-weight: bold; color: brown;">:
-</span>        - <span style="font-weight: bold; color: red;">%dir%/vendor/carew/theme-bootstrap</span></pre></li>
+<pre><code>#config.yml
+engine:
+    themes:
+        - %dir%/vendor/carew/theme-bootstrap
+</code></pre></li>
 </ol><p>Theme folder can contain <code>layouts</code> and <code>assets</code> folders.</p>
 
 <h2 id="customization">Customization<a href="#customization" class="anchor">#</a></h2>
@@ -113,16 +113,17 @@ directory with the same name as the original one.</p>
 
 <p>You can also inherit the original one with <code>extends</code>:</p>
 
-<pre class="twig" style="font-family:monospace;"># my_project/layouts/default.html.twig
-<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/extends.html"><span style="color: #0600FF;">extends</span></a> <span style="color: #ff0000;">'vendor/carew/theme-bootstrap/layouts/index.html.twig'</span><span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span>
-&nbsp;
-<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/block.html"><span style="color: #0600FF;">block</span></a> <span style="color: #00aaff;">nav_right</span> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span>
-    &lt;ul class=&quot;nav pull-right&quot;&gt;
-        &lt;li class=&quot;dropdown&quot;&gt;
+<pre><code># my_project/layouts/default.html.twig
+{% extends 'vendor/carew/theme-bootstrap/layouts/index.html.twig'%}
+
+{% block nav_right %}
+    &lt;ul class="nav pull-right"&gt;
+        &lt;li class="dropdown"&gt;
             ...
         &lt;/li&gt;
     &lt;/ul&gt;
-<span style="color: #008000;"><span style="color: #D36900;">&#123;</span>%</span> <a href="http://twig.sensiolabs.org/doc/tags/endblock.html"><span style="color: #0600FF;">endblock</span></a> <span style="color: #008000;">%<span style="color: #D36900;">&#125;</span></span></pre>
+{% endblock %}
+</code></pre>
 
 <h2 id="you-have-created-a-theme">You have created a theme<a href="#you-have-created-a-theme" class="anchor">#</a></h2>
 
@@ -148,9 +149,8 @@ and add a new link.</p>            </div>
               </div>
     
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
     <script src="./js/vendor/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
-      </body>
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script>  </body>
 </html>

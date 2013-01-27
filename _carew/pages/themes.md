@@ -19,7 +19,6 @@ Themes are default layouts and / or assets.
 
 1. Register theme in the `config.yml` file:
 
-        yaml
         #config.yml
         engine:
             themes:
@@ -35,7 +34,6 @@ directory with the same name as the original one.
 
 You can also inherit the original one with `extends`:
 
-    twig
     # my_project/layouts/default.html.twig
     {% extends 'vendor/carew/theme-bootstrap/layouts/index.html.twig'%}
 

@@ -20,7 +20,6 @@ You can use as many plugin as you want.
 
 1. Register theme in the `config.yml` file:
 
-        yaml
         #config.yml
         engine:
             extensions:

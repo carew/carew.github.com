@@ -93,7 +93,6 @@ Now you can use the following directories:
 * **config.yml:** Yaml file with some configuration. All variables unde `site`
   will be sent to twig templates. Here is a sample:
 
-        yaml
         site:
           author: Grégoire Pineau
           title:  Foo
@@ -101,12 +100,13 @@ Now you can use the following directories:
 
   And in the template:
 
-        twig
         <html>
           <head>
             <title>{{ site.title }}</title>
 
-**Note:** You can use `{{ relative Root }}` (without space between `relative` and `Root`) to point the relative root in all .md files.
+**Note:** You can use "{{&nbsp;relativeRoot }}" to point the relative root in all .md files.
+
+
 
 Usage
 -----
@@ -115,7 +115,6 @@ Usage
 
 In order to build the site, you can use the `carew:build` command:
 
-    bash
     $ vendor/bin/carew carew:build
 
 This will populate the `web` directory with a set of files that can be
@@ -123,12 +122,10 @@ deployed onto any static web server.
 
 You can change input / ouput directory. Run:
 
-    bash
     $ vendor/bin/carew help carew:build
 
 ### Create a new blog post
 
 Just run:
 
-    bash
     $ vendor/bin/carew carew:generate:post [--date="..."] title
