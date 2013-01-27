@@ -10,6 +10,7 @@ Existing Plugins
 * [TOC Builder](https://github.com/carew/plugin-toc#readme): Build a Table Of Content
 * [HighLighter](https://github.com/carew/plugin-highlight#readme): Highligh your code
 * [Sami](https://github.com/carew/plugin-sami#readme): Build api doc from carew
+* [Pagination](https://github.com/carew/plugin-pagination#readme): Add pagination to your index.html
 
 Installation
 ------------
