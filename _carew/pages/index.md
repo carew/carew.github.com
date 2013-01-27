@@ -29,6 +29,8 @@ Demo
 Do you want to see it in action? This doc uses carew ;)
 Have a look to the [codebase](https://github.com/carew/carew.github.com/tree/master/_carew).
 
+By the way, if you use carew, let me know.
+
 Why another one?
 ----------------
 
