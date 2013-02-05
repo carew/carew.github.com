@@ -80,6 +80,10 @@ h1 .anchor, h2 .anchor, h3 .anchor, h4 .anchor {
   margin-left: 5px;
 }
 
+.comments {
+  margin-top: 25px;
+}
+
 .date {
   margin-left: 10px;
   margin-bottom: 10px;
