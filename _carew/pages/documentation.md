@@ -35,12 +35,13 @@ Now you can use the following directories:
     `{{ relativeRoot }}/main.css`.
   * **tags**: A listing of all tags with theirs associated pages/posts collection.
 
-  Filenames that follow the `index.$format.twig` naming scheme will get compiled
-  to an `index.$format` file.
+  Files in the `layouts` directory that follow the `index.$format.twig` naming scheme
+  will get compiled to an `index.$format` file.
+
   **Note:** You can also create an `index.md` file in `pages` directory.
 
-  Filenames that follow the `tags.$format.twig` naming scheme will get compiled
-  to `tags/$tagName.$format` files. Templates have access to `tag` and `posts`
+  Files in the `layouts` directory that follow the `tags.$format.twig` naming scheme
+  will get compiled to `tags/$tagName.$format` files. Templates have access to `tag` and `posts`
   variables. Here `posts` contains only Posts with current tag
 
 * **posts:** Markdown files representing blog posts. Must be in the format of
@@ -50,6 +51,7 @@ Now you can use the following directories:
         ---
         layout: post
         title: Blogging Like a Hacker
+        tags: [blog, hacker]
         ---
 
         # Blogging Like a Hacker
@@ -64,6 +66,10 @@ Now you can use the following directories:
   * **layout:** Layout to be used for rendering this post. Defaults to `default`,
     which means `layouts/default.html.twig` is rendered unless specified
     otherwise.
+  * **tags:** Every article and every page can have one are more tags. For every tag, a page
+    `/tags/$tagname.html` will be created. By default, these pages contain lists of all articles
+    associated with the respective tag. You can alter their templates as described above in the
+    section about the **layouts** directory.
 
   You can add more fields and used them in the template, under the
   `document.metadata` variable.
@@ -74,6 +80,7 @@ Now you can use the following directories:
         ---
         layout: page
         title: About
+        tags: []
         ---
 
         # About me

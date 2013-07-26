@@ -13,8 +13,8 @@
     <meta name="author" content="Grégoire Pineau">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    
+
+
     <link rel="stylesheet" href="./css/bootstrap.min.css"><link rel="stylesheet" href="./css/bootstrap-responsive.min.css"><link rel="stylesheet" href="./css/main.css"><link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/pojoaque.min.css">
     <script src="./js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
   </head>
@@ -25,7 +25,7 @@
     <![endif]-->
 
                 <a href="https://github.com/carew/carew" target="_blank" class="hidden-tablet hidden-phone"><img style="position: fixed; top: 40px; left: 0; border: 0; z-index:10000" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
-    
+
           <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
               <div class="container">
@@ -37,12 +37,12 @@
                   <a class="brand" href=".">Carew</a>
                   <div class="nav-collapse collapse">
                     <ul class="nav">
-                                                                                                                                              <li><a href="./plugins.html">Plugins</a></li>
-                                                                                                                        <li class="active"><a href="./documentation.html">Documentation</a></li>
+                                                                                                                                              <li class="active"><a href="./documentation.html">Documentation</a></li>
                                                                                                                         <li><a href="./hosting.html">Hosting</a></li>
+                                                                                                                        <li><a href="./plugins.html">Plugins</a></li>
                                                                                                                         <li><a href="./themes.html">Themes</a></li>
                                                                                                                         <li><a href="./api/master/index.html">API</a></li>
-                                                                                                          
+
     <li class="divider-vertical"></li>
                         <li><a href="#structure">Structure</a></li>
                     <li><a href="#usage">Usage</a></li>
@@ -70,17 +70,17 @@
               </div>
           </div>
       </div>
-    
-    
+
+
           <div class="container">
 
-        
+
                   <div class="row">
             <div class="span10 offset1 content">
                                                 <div class="page-header">
                     <h1>Documentation <small>For the end user</small></h1>
                   </div>
-                              
+
               <h2 id="structure">Structure<a href="#structure" class="anchor">#</a></h2>
 
 <p>Now you can use the following directories:</p>
@@ -108,12 +108,13 @@ pages/posts collection. Useful in templates to build menu.</li>
 for referencing assets. Must always be followed by a slash, e.g.:
 <code>./main.css</code>.</li>
 <li><strong>tags</strong>: A listing of all tags with theirs associated pages/posts collection.</li>
-</ul><p>Filenames that follow the <code>index.$format.twig</code> naming scheme will get compiled
-to an <code>index.$format</code> file.
-<strong>Note:</strong> You can also create an <code>index.md</code> file in <code>pages</code> directory.</p>
+</ul><p>Files in the <code>layouts</code> directory that follow the <code>index.$format.twig</code> naming scheme
+will get compiled to an <code>index.$format</code> file.</p>
 
-<p>Filenames that follow the <code>tags.$format.twig</code> naming scheme will get compiled
-to <code>tags/$tagName.$format</code> files. Templates have access to <code>tag</code> and <code>posts</code>
+<p><strong>Note:</strong> You can also create an <code>index.md</code> file in <code>pages</code> directory.</p>
+
+<p>Files in the <code>layouts</code> directory that follow the <code>tags.$format.twig</code> naming scheme
+will get compiled to <code>tags/$tagName.$format</code> files. Templates have access to <code>tag</code> and <code>posts</code>
 variables. Here <code>posts</code> contains only Posts with current tag</p></li>
 <li><p><strong>posts:</strong> Markdown files representing blog posts. Must be in the format of
 <code>YYYY-mm-dd-slug.md</code>, e.g. <code>2012-09-20-like-a-hacker.md</code>. Each one must begin
@@ -122,6 +123,7 @@ with a YAML front matter. Here is a sample blog post:</p>
 <pre><code>---
 layout: post
 title: Blogging Like a Hacker
+tags: [blog, hacker]
 ---
 
 # Blogging Like a Hacker
@@ -137,6 +139,10 @@ title: Blogging Like a Hacker
 <li><strong>layout:</strong> Layout to be used for rendering this post. Defaults to <code>default</code>,
 which means <code>layouts/default.html.twig</code> is rendered unless specified
 otherwise.</li>
+<li><strong>tags:</strong> Every article and every page can have one are more tags. For every tag, a page
+<code>/tags/$tagname.html</code> will be created. By default, these pages contain lists of all articles
+associated with the respective tag. You can alter their templates as described above in the
+section about the <strong>layouts</strong> directory.</li>
 </ul><p>You can add more fields and used them in the template, under the
 <code>document.metadata</code> variable.</p></li>
 <li><p><strong>pages:</strong> Markdown files representing pages. Each one must begin
@@ -145,6 +151,7 @@ with a YAML front matter. Here is a sample page:</p>
 <pre><code>---
 layout: page
 title: About
+tags: []
 ---
 
 # About me
@@ -202,7 +209,7 @@ deployed onto any static web server.</p>
 </code></pre>
                                                         </div>
           </div>
-        
+
                   <footer>
             <p>
               &copy;
@@ -216,7 +223,7 @@ deployed onto any static web server.</p>
             </p>
           </footer>
               </div>
-    
-    
+
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script><script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.9.0.min.js"><\/script>')</script><script src="./js/vendor/bootstrap.min.js"></script><script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script type="text/javascript"></script>  </body>
 </html>
