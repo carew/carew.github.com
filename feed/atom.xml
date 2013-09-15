@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Carew</title>
+    <subtitle>The tiny website generator</subtitle>
+    <link href="http://carew.github.io/feed/index.atom" rel="self" />
+    <link href="http://carew.github.io/" />
+        <id>http://carew.github.io/</id>
+            <updated>2013-09-15T00:00:00+02:00</updated>
+            <entry>
+        <title>Release 2.0.0 BETA</title>
+                <id>http://carew.github.io/2013/09/15/release-2-0-0-BETA.html</id>
+                <updated>2013-09-15T00:00:00+02:00</updated>
+        <author>
+            <name>Grégoire Pineau</name>
+            <email>lyrixx@lyrixx.info</email>
+        </author>
+        <link rel="alternate" type="text/html" href="http://carew.github.io/2013/09/15/release-2-0-0-BETA.html"/>
+        <content type="html" xml:lang="en"><![CDATA[<p>I'm very happy to release the first BETA of Carew2.</p>
+
+<p>This version come with a lot of new features:</p>
+
+<ul><li>Built-in pagination.</li>
+<li>Built-in code highlighting.</li>
+<li>Built-in table of content generator.</li>
+<li>More tests.</li>
+<li>More flexible.</li>
+<li>More documentation.</li>
+<li>A better debugging.</li>
+<li>A better design.</li>
+</ul><p>There is still few little thing to polish, but you can already use this new
+version. As usual, the better way to start is with the boiler-plate:</p>
+
+<pre><code>$ php composer.phar create-project carew/boilerplate my_website -s dev
+</code></pre>
+
+<p>Then you can build the website:</p>
+
+<pre><code>$ cd my_website
+$ vendor/bin/carew build
+</code></pre>
+
+<p>All your content should be compatible with the new version.</p>]]></content>
+    </entry>
+    </feed>

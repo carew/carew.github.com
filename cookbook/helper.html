@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Usefull twig function</title>
+
+    <meta name="description" content="The tiny website generator">
+    <meta name="author" content="Grégoire Pineau">
+    <meta name="viewport" content="width=device-width">
+
+    
+    <link rel="canonical" href="http://carew.github.io/cookbook/helper.html"/>
+              <link rel="alternate" href="http://carew.github.io/feed/index.atom" type="application/atom+xml" title="Carew"/>
+      
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/pojoaque.min.css">
+    <script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+                <a href="https://github.com/carew/carew" target="_blank"><img style="position: fixed; top: 40px; left: 0; border: 0; z-index:10000" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    
+          <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+              <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="..">Carew</a>
+                  <div class="nav-collapse collapse">
+                    <ul class="nav">
+                                                                                                                <li><a href="../news.html">News</a></li>
+                                                            <li><a href="../cookbook.html">Cookbooks</a></li>
+                                                            <li><a href="../documentation.html">Documentation</a></li>
+                                                                            
+    <li class="divider-vertical"></li>
+    <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Table of content
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+                                                <li><a href="#globals">Globals</a></li>
+                                    <li><a href="#functions">Functions</a></li>
+                                    </ul>
+    </li>
+                    </ul>
+                        <ul class="nav pull-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Other OSS project">
+                Lyrixx
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                                                    <li><a href="http://carew.github.com" target="_blank">Carew</a></li>
+                                    <li><a href="http://lyrixx.github.com/Silex-Kitchen-Edition/" target="_blank">Silex Kitchen Edition</a></li>
+                                    <li><a href="http://lyrixx.github.com/lifestream/" target="_blank">Lifestream</a></li>
+                                    <li><a href="http://lyrixx.github.com/Series/" target="_blank">Series</a></li>
+                                <li class="divider"></li>
+                <li class="nav-header">Follow me on</li>
+                                                    <li><a href="http://github.com/lyrixx" target="_blank">Github</a></li>
+                                    <li><a href="http://twitter.com/lyrixx" target="_blank">Twitter</a></li>
+                                    <li><a href="http://blog.lyrixx.info" target="_blank">Blog</a></li>
+                            </ul>
+        </li>
+    </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    
+    
+          <div class="container">
+
+        
+                  <div class="row">
+            <div class="span10 offset1 content">
+                                                <div class="page-header">
+                    <h1>Usefull twig function</h1>
+                  </div>
+                              
+              <div class="pull-right">
+    <div class="well"><ul class="nav nav-list"><li class="nav-header">Quick access</li><li><a href="#globals">Globals</a></li><li><a href="#functions">Functions</a><ul class="nav nav-list"><li><a href="#path">path</a></li><li><a href="#link">link</a></li><li><a href="#render-document-toc">render_document_toc</a></li><li><a href="#render-document">render_document_*</a></li><li><a href="#render-document-2">render_document</a></li><li><a href="#render-documents">render_documents</a></li><li><a href="#paginate">paginate</a></li></ul></li></ul></div>
+</div>
+
+<p>Inside your templates (<code>.html.twig</code> file) and / or your document (<code>.md</code> files)
+you can use several twig globals / functions.</p>
+
+<h2 id="globals">Globals<a href="#globals" class="anchor">#</a></h2>
+
+<p>You have access to the <code>carew</code> global. This is an instance of
+<code>Carew/Twig/Globals</code> class. This one contains few things:</p>
+
+<ul><li><p><code>site</code>: Contains all value under the <code>site</code> section of the <code>config.yml</code></p></li>
+<li><p><code>documents</code>: Contains the list of all documents. Keys are the full path of a
+document. This is very usefull to create a link to another document.</p></li>
+<li><p><code>posts</code>: Contains the list of all posts. Keys are the full path of a document.
+This is very usefull to create a list of last blog post.</p></li>
+<li><p><code>pages</code>: Contains the list of all pages. Keys are the full path of a document.</p></li>
+<li><p><code>tags</code>: Contains the list of all tags. Keys are the tag name. Values are
+collections of document.</p></li>
+<li><p><code>navigations</code>: Contains the list of all tags. Keys are the navigation name.
+Values are collections of document.</p></li>
+<li><p><code>relativeRoot</code>: Point the (web) root directory. Can be something like <code>../..</code>.</p></li>
+<li><p><code>currentPath</code>: Point the current path from the <code>relativeRoot</code>. Can be
+something like <code>2012/01/01/hello.html</code>.</p></li>
+<li><p><code>document</code>: Represent the current document. This is an instance of
+<code>Carew/Document</code> class.</p></li>
+</ul><p>Some examples:</p>
+
+<pre><code>{{ carew.site.decription }}
+
+{# read the next chapter, there is a much better way to do that #}
+&lt;ul&gt;
+    {% for post in carew.posts %}
+        &lt;li&gt;
+            &lt;a href="{{ relativeRoot }}/{{ document.path }}"&gt;
+                {{ document.title|title }}
+            &lt;/a&gt;
+        &lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+
+{# read the next chapter, there is a much better way to do that #}
+&lt;img src="{{ carew.relativeRoot }}/image/logo.png" alt="Logo"&gt;
+</code></pre>
+
+<h2 id="functions">Functions<a href="#functions" class="anchor">#</a></h2>
+
+<p><strong>Note:</strong> You can tweak generated content for almost all functions by overriding the
+<code>blocks.html.twig</code> template. See the <a href="../cookbook/themes.html">
+        theme
+chapter
+    </a> for more information.</p>
+
+<h3 id="path">path<a href="#path" class="anchor">#</a></h3>
+
+<p><code>path</code>: Render a path to a document</p>
+
+<pre><code>{% path('pages/index.md') %}
+</code></pre>
+
+<p>Render something like: <code>index.html</code></p>
+
+<p>Arguments:</p>
+
+<ol><li><code>filePath</code>: the full path to the document. i.e.: where the file is
+located on your disk.</li>
+</ol><p>If you want to change the generated content, override the <code>document_path</code>
+block.</p>
+
+<h3 id="link">link<a href="#link" class="anchor">#</a></h3>
+
+<p><code>link</code>: Render a link to a document</p>
+
+<pre><code>{% link('pages/index.md', 'a link') %}
+</code></pre>
+
+<p>Render something like: <code>&lt;a href="index.html"&gt;a link&lt;/a&gt;</code></p>
+
+<p>Arguments:</p>
+
+<ol><li><p><code>filePath</code>: the full path to the document. i.e.: where the file is
+located on your disk.</p></li>
+<li><p><code>title</code> (optional): The link title. Default value is the document title.</p></li>
+<li><p><code>attrs</code> (optional): An array of HTML attribute.</p></li>
+</ol><p>If you want to change the generated content, override the <code>document_link</code>
+block.</p>
+
+<h3 id="render-document-toc">render_document_toc<a href="#render-document-toc" class="anchor">#</a></h3>
+
+<p><code>render_document_toc</code>: Render the Table Of Content of a document</p>
+
+<pre><code>{% render_document_toc() %}
+</code></pre>
+
+<p>Render something like:</p>
+
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;&lt;a href="#section-1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#section-2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#section-3"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>Arguments:</p>
+
+<ol><li><code>toc</code> (optional): A document instance or a TOC. The default value is
+the current document.</li>
+</ol><p>If you want to change the generated content, override the <code>document_toc</code>
+block.</p>
+
+<h3 id="render-document">render_document_*<a href="#render-document" class="anchor">#</a></h3>
+
+<p><code>render_document_*</code>: This is a wild-card function. It will take the <code>*</code> and
+render the  <code>document_*</code> block.</p>
+
+<p>Arguments:</p>
+
+<ol><li><code>document</code> (optional): A document instance. The default value is the current
+document.</li>
+</ol><p>If you want to change the generated content, override the <code>document_*</code>
+block.</p>
+
+<p><strong>Waning</strong>: The block <code>document_*</code> must be defined.</p>
+
+<h3 id="render-document-2">render_document<a href="#render-document-2" class="anchor">#</a></h3>
+
+<p><code>render_document</code>: Render a document.</p>
+
+<pre><code>{% render_document(carew.document) %}
+</code></pre>
+
+<p>Generate something like:</p>
+
+<pre><code>&lt;h2&gt;Document title&lt;/h2&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
+harum nam facilis modi eos est ipsa nostrum recusandae assumenda
+molestiae nemo omnis animi? Quia maiores fuga quam necessitatibus
+quaerat cum.
+</code></pre>
+
+<p>Arguments:</p>
+
+<ol><li><code>document</code>: A document instance.</li>
+</ol><p>This function will call one of the following block depending of the document
+type: <code>post</code>, <code>page</code>, <code>api</code>, <code>unknown</code>.</p>
+
+<p>If you want to change the generated content, override one of theses blocks.</p>
+
+<h3 id="render-documents">render_documents<a href="#render-documents" class="anchor">#</a></h3>
+
+<p><code>render_documents</code>: Render a collection of document.</p>
+
+<pre><code>{% render_document(carew.document) %}
+</code></pre>
+
+<p>Generate something like:</p>
+
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;&lt;a href="/post1.html"&gt;Post 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/post2.html"&gt;Post 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/post3.html"&gt;Post 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>Arguments:</p>
+
+<ol><li><code>documents</code>: A collection (array) of document instance.</li>
+</ol><p>If you want to change the generated content, override the <code>documents</code> block.</p>
+
+<h3 id="paginate">paginate<a href="#paginate" class="anchor">#</a></h3>
+
+<p><code>paginate</code>: Add pagination support to a collection of document.</p>
+
+<p><strong>warning:</strong> This function can only be applied in a <code>file.md</code>, not in a template.</p>
+
+<p><strong>warning:</strong> This function return an array. IT should be use with
+<code>render_documents</code> function.</p>
+
+<pre><code>{% render_documents(paginate(carew.posts)) %}
+</code></pre>
+
+<p>This function will add a pagination on the collection. So it will create as
+many page as needed.</p>
+
+<p>Arguments:</p>
+
+<ol><li><p><code>documents</code>: A collection (array) of document instance.</p></li>
+<li><p><code>maxPerPage</code>: Number of item per page.</p></li>
+</ol><p>If you want to change the generated content, override the <code>pagination</code>
+block.</p>            </div>
+          </div>
+        
+                  <footer>
+            <p>
+              &copy;
+                              <a href="http://gregoirepineau.fr">
+                  Grégoire Pineau
+                </a>
+                            2013
+              <small>
+                with help from <a href="http://carew.github.com/" target="_blank">Carew</a>
+              </small>
+            </p>
+          </footer>
+              </div>
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script>  </body>
+</html>
