@@ -7,22 +7,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Cookbooks</title>
+    <title>How tags works?</title>
 
     <meta name="description" content="The tiny website generator">
     <meta name="author" content="Grégoire Pineau">
     <meta name="viewport" content="width=device-width">
 
     
-    <link rel="canonical" href="http://carew.github.io/cookbook.html"/>
+    <link rel="canonical" href="http://carew.github.io/cookbook/tags.html"/>
               <link rel="alternate" href="http://carew.github.io/feed/atom.xml" type="application/atom+xml" title="Carew"/>
       
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/pojoaque.min.css">
-    <script src="./js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    <script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
   </head>
 
   <body>
@@ -40,13 +40,23 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </a>
-                  <a class="brand" href=".">Carew</a>
+                  <a class="brand" href="..">Carew</a>
                   <div class="nav-collapse collapse">
                     <ul class="nav">
-                                                                                                            <li><a href="news.html">News</a></li>
-                                                            <li class="active"><a href="cookbook.html">Cookbooks</a></li>
-                                                            <li><a href="documentation.html">Documentation</a></li>
-                                                                                                </ul>
+                                                                                                                <li><a href="../news.html">News</a></li>
+                                                            <li><a href="../cookbook.html">Cookbooks</a></li>
+                                                            <li><a href="../documentation.html">Documentation</a></li>
+                                                                            
+    <li class="divider-vertical"></li>
+    <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Table of content
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+                    </ul>
+    </li>
+                    </ul>
                         <ul class="nav pull-right">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Other OSS project">
@@ -78,22 +88,39 @@
                   <div class="row">
             <div class="span10 offset1 content">
                                                 <div class="page-header">
-                    <h1>Cookbooks</h1>
+                    <h1>How tags works?</h1>
                   </div>
                               
-              <p><ul class="unstyled" style="padding-left:30px"><li class=""><h5><a href="cookbook/tags.html"><i class="icon-book"></i>
-                                How tags works?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/hosting.html"><i class="icon-book"></i>
-                                How to host a website build with carew?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/plugins.html"><i class="icon-book"></i>
-                                How to use and create plugins?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/configuration.html"><i class="icon-book"></i>
-                                How to configure carew?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/themes.html"><i class="icon-book"></i>
-                                How to use and create theme?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/helper.html"><i class="icon-book"></i>
-                                Usefull twig function
-                                                                        </a></h5></li></ul></p>            </div>
+              <p>You can tag all of your document with the following syntax:</p>
+
+<pre><code>---
+title: How to create a new page?
+tags:
+    - documentation
+    - page
+---
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet
+consectetur aspernatur dolor voluptatem laboriosam impedit officiis
+consequatur dignissimos nesciunt temporibus aliquam earum porro sapiente
+blanditiis dolorem non. Minus, quae!
+</code></pre>
+
+<p>When a document is taggued, it going to be added to the global
+<code>carew.tags.&lt;tag name&gt;</code>.</p>
+
+<p>More over, few pages will be generated:</p>
+
+<ul><li>A first one which list all tags.</li>
+<li>A page per tag which list all document.</li>
+</ul><p>
+You can create a link to the first page with this syntax <code>{{ path('tags') }}</code>
+and to a specific tag: <code>{{ path('tags/&lt;tag name&gt;') }}</code>.
+</p>
+
+<p>For the moment, tags pages a not customizable. Open <a href="https://github.com/carew/carew/issues/new">an
+issue</a> if you want to be able to
+customize them.</p>            </div>
           </div>
         
                   <footer>
@@ -112,7 +139,7 @@
     
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-    <script src="./js/vendor/bootstrap.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script>  </body>
 </html>
