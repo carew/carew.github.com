@@ -5,7 +5,7 @@
     <link href="http://carew.github.io/feed/index.atom" rel="self" />
     <link href="http://carew.github.io/" />
         <id>http://carew.github.io/</id>
-            <updated>2013-09-15T00:00:00+02:00</updated>
+            <updated>2013-11-27T00:00:00+01:00</updated>
             <entry>
         <title>Release 2.0.0 BETA</title>
                 <id>http://carew.github.io/2013/09/15/release-2-0-0-BETA.html</id>
@@ -40,5 +40,29 @@ $ bin/carew build
 </code></pre>
 
 <p>All your content should be compatible with the new version.</p>]]></content>
+    </entry>
+        <entry>
+        <title>Release 2.0.0 Beta2</title>
+                <id>http://carew.github.io/2013/11/27/release-2-0-0-beta2.html</id>
+                <updated>2013-11-27T00:00:00+01:00</updated>
+        <author>
+            <name>Grégoire Pineau</name>
+            <email>lyrixx@lyrixx.info</email>
+        </author>
+        <link rel="alternate" type="text/html" href="http://carew.github.io/2013/11/27/release-2-0-0-beta2.html"/>
+        <content type="html" xml:lang="en"><![CDATA[<p>I'm very happy to release the second BETA of Carew2.</p>
+
+<p>This version does not ship lot of new features. But you can now use the <a href="../../../cookbook/preview.html">
+        preview command
+    </a> to start the build-in php
+web server.</p>
+
+<p>Then I would like to:</p>
+
+<ul><li>made error messages easier to understand;</li>
+<li>add an published flag;</li>
+<li>made post slug customizable;</li>
+<li>add more test case;</li>
+</ul><p>before the final release.</p>]]></content>
     </entry>
     </feed>
