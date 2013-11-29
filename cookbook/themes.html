@@ -96,49 +96,45 @@
               <div class="pull-right">
     <div class="well"><ul class="nav nav-list"><li class="nav-header">Quick access</li><li><a href="#what-is-a-theme">What is a theme?</a></li><li><a href="#existing-themes">Existing Themes</a></li><li><a href="#installation">Installation</a></li><li><a href="#customization">Customization</a></li><li><a href="#blocks-theming">Blocks theming</a></li><li><a href="#you-have-created-a-theme">You have created a theme?</a></li></ul></div>
 </div>
-
 <h2 id="what-is-a-theme">What is a theme?<a href="#what-is-a-theme" class="anchor">#</a></h2>
-
 <p>A theme is some default layouts / templates, blocks, and / or assets. You can use multiple
 theme in the same project. So thanks to theming, you can easily customize the
 rendering of your blog / website. There is two king of theme:</p>
-
-<ul><li><p>Personal theme, not shareable. In this case, just put yours templates in the
-<code>layouts/</code> directory, in the root directory.</p></li>
-<li><p>Common theme, shareable. In this case, you can install theme created by the
-community.</p></li>
+<ul><li>
+<p>Personal theme, not shareable. In this case, just put yours templates in the
+<code>layouts/</code> directory, in the root directory.</p>
+</li>
+<li>Common theme, shareable. In this case, you can install theme created by the
+community.</li>
 </ul><h2 id="existing-themes">Existing Themes<a href="#existing-themes" class="anchor">#</a></h2>
-
 <ul><li><a href="http://github.com/carew/theme-bootstrap/">Twitter bootstrap</a></li>
 </ul><h2 id="installation">Installation<a href="#installation" class="anchor">#</a></h2>
-
 <p>You can use as many themes as you want. This section is only for theme created
 by the community.</p>
-
-<ol><li><p>Add the dependency with composer. Generally, the dependency can be found in
-the <code>composer.json</code> file in the theme repository.</p></li>
-<li><p>Register theme in the <code>config.yml</code> file:</p>
-
+<ol><li>
+<p>Add the dependency with composer. Generally, the dependency can be found in
+the <code>composer.json</code> file in the theme repository.</p>
+</li>
+<li>
+<p>Register theme in the <code>config.yml</code> file:</p>
 <pre><code>#config.yml
+
 engine:
+
     themes:
-        - %dir%/vendor/carew/theme-bootstrap
-</code></pre></li>
+
+        - %dir%/vendor/carew/theme-bootstrap</code></pre>
+</li>
 </ol><p>Theme folder can contain <code>layouts</code> and <code>assets</code> folders. The <code>%dir%</code> parameter
 will be replaced by the current directory (i.e. the directory that contains the
 <code>config.yml</code> file).</p>
-
 <p><strong>Note:</strong> The order matter. Carew will search for template in your <code>layouts/</code>
 folder,  then in themes folder registered in the configuration, then fallback to
 the default theme.</p>
-
 <h2 id="customization">Customization<a href="#customization" class="anchor">#</a></h2>
-
 <p>If you want to replace a template, create a new template in your <code>layouts/</code>
 directory with the same name as the original one.</p>
-
 <p>You can also extends the original one with <code>extends</code>:</p>
-
 <pre><code>{# my_project/layouts/default.html.twig #}
 {% extends 'vendor/carew/theme-bootstrap/layouts/default.html.twig' %}
 
@@ -148,11 +144,8 @@ directory with the same name as the original one.</p>
             ...
         &lt;/li&gt;
     &lt;/ul&gt;
-{% endblock %}
-</code></pre>
-
+{% endblock %}</code></pre>
 <p>Default layouts are in a special namespace <code>default_theme</code>:</p>
-
 <pre><code>{# my_project/layouts/default.html.twig #}
 {% extends '@default_theme/default.html.twig' %}
 
@@ -163,16 +156,12 @@ directory with the same name as the original one.</p>
             &lt;a href="http://gregoirepineau.fr"&gt;Visit my personal website&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
-{% endblock %}
-</code></pre>
-
+{% endblock %}</code></pre>
 <h2 id="blocks-theming">Blocks theming<a href="#blocks-theming" class="anchor">#</a></h2>
-
 <p>With carew, you have <a href="../cookbook/helper.html">
         useful helper set
     </a>. Almost all helper are customizable thanks to special <code>blocks.html.twig</code>. Of
 course, you can overide this template:</p>
-
 <pre><code>{% use '@default_theme/blocks.html.twig' %} {# Reimport default blocks #}
 
 {% block document_toc %}
@@ -193,11 +182,8 @@ course, you can overide this template:</p>
     &lt;/ul&gt;
     {% if 0 == deep %}&lt;/div&gt;{% endif %}
 {%- endspaceless %}
-{% endblock %}
-</code></pre>
-
+{% endblock %}</code></pre>
 <h2 id="you-have-created-a-theme">You have created a theme?<a href="#you-have-created-a-theme" class="anchor">#</a></h2>
-
 <p>You have created a theme and you want to share it ? Write me an
 <a href="mailto:lyrixx@lyrixx.info">email</a> and I will create a new repository on
 <a href="https://github.com/carew">github/carew</a> for you, or send me a

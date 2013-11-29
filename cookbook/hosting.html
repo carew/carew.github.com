@@ -90,44 +90,30 @@
                   </div>
                               
               <h2 id="behind-a-webserver">Behind a webserver<a href="#behind-a-webserver" class="anchor">#</a></h2>
-
 <p>If you have a webserver, just copy the content of the <code>web</code> folder to the
 document root of your web server.</p>
-
 <h2 id="github">Github<a href="#github" class="anchor">#</a></h2>
-
 <p>How to host carew on github ?</p>
-
 <p><a href="https://github.com">Github</a> can host <a href="http://pages.github.com/">static pages</a>.
 It's very easy thanks to carew.</p>
-
 <p>Start by creating a new project with <a href="http://getcomposer.org">composer</a>:</p>
-
 <pre><code>$ mkdir my_site
 $ cd my_site
 $ git init
 $ git co -b gh-pages
-$ php composer.phar create-project carew/boilerplate _carew
-</code></pre>
-
+$ php composer.phar create-project carew/boilerplate _carew</code></pre>
 <p>To make it more simple to build your website, you can setup a <code>build.sh</code> script
 in <code>_carew</code> folder:</p>
-
 <pre><code>#!/bin/bash
 
 BASE=`dirname $0`
-$BASE/bin/carew build --base-dir=$BASE --web-dir=$BASE/..
-</code></pre>
-
+$BASE/bin/carew build --base-dir=$BASE --web-dir=$BASE/..</code></pre>
 <p>Then you can build the website with <code>_carew/build.sh</code> command.
 Now, you can commit and push everything to your github repository:</p>
-
 <pre><code>$ git add .
 $ git commit -m "Inital commit"
 $ git remote add origin git@github.com:YOUR_NAME/YOUR_REPO.git
-$ git push origin gh-pages -u
-</code></pre>
-
+$ git push origin gh-pages -u</code></pre>
 <p>Now, you can browse <code>http://YOUR_NAME.github.com/YOU_REPO</code></p>            </div>
           </div>
         

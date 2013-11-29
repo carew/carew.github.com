@@ -89,7 +89,6 @@
                               
               <p>You can configure carew thanks to <code>config.yml</code> file. This file should be in  the
 root directory. Here is a sample:</p>
-
 <pre><code>site:
     title:        Carew
     description:  The tiny website generator
@@ -102,16 +101,11 @@ engine:
         - %dir%/vendor/lyrixx/my-theme-bootstrap
         - %dir%/vendor/carew/theme-bootstrap
     extensions:
-        - Carew\Plugin\Sami\SamiExtension
-</code></pre>
-
+        - Carew\Plugin\Sami\SamiExtension</code></pre>
 <p>Most values under the <code>site</code> section are default values for your layout. Each
 values are available in your template with the following syntax:</p>
-
 <pre><code>{{ carew.site.decription }}
-{# render: The tiny website generator #}
-</code></pre>
-
+{# render: The tiny website generator #}</code></pre>
 <p>The <code>engine</code> section is used to configure carew's internal. Learn more about
 <a href="../cookbook/themes.html">
         theming

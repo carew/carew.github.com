@@ -92,43 +92,37 @@
                   </div>
                               
               <h2 id="existing-plugins">Existing Plugins<a href="#existing-plugins" class="anchor">#</a></h2>
-
 <ul><li><a href="https://github.com/carew/plugin-sami#readme">Sami</a>: Build api doc from carew</li>
 </ul><h2 id="installation">Installation<a href="#installation" class="anchor">#</a></h2>
-
 <p>You can use as many plugins as you want.</p>
-
-<ol><li><p>Add the dependency with composer. Generally, the dependency can be found in
-the <code>composer.json</code> file in the theme repository.</p></li>
-<li><p>Register theme in the <code>config.yml</code> file:</p>
-
+<ol><li>
+<p>Add the dependency with composer. Generally, the dependency can be found in
+the <code>composer.json</code> file in the theme repository.</p>
+</li>
+<li>
+<p>Register theme in the <code>config.yml</code> file:</p>
 <pre><code>#config.yml
+
 engine:
+
     extensions:
-        - Carew\Plugin\Toc\TocExtension
-</code></pre></li>
+
+        - Carew\Plugin\Toc\TocExtension</code></pre>
+</li>
 </ol><p>That's it.</p>
-
 <h2 id="how-to-write-a-plugin">How to write a plugin<a href="#how-to-write-a-plugin" class="anchor">#</a></h2>
-
 <p>The plugin must implements <code>Carew\ExtensionInterface</code>.</p>
-
 <p><code>Carew</code> will call <code>ExtensionInterface::register</code> and give itself
 to the extension. So the plugin can alter everything.</p>
-
 <p>The plugin can access to:</p>
-
 <ul><li>The <code>carew</code> instance</li>
 <li>The <code>container</code>, an instance of <a href="http://pimple.sensiolabs.org/">pimple</a>.</li>
 <li>The <code>event_dispatcher</code>, an instance of <a href="https://github.com/symfony/EventDispatcher">Symfony EventDispatcher</a>.</li>
 </ul><p>You can have a look to the <code>CoreExtension</code> for more information.</p>
-
 <p>Learn more about the carew architecture is the <a href="../cookbook/internal.html">
         internal chapter
     </a>.</p>
-
 <h2 id="you-have-created-a-plugin">You have created a plugin<a href="#you-have-created-a-plugin" class="anchor">#</a></h2>
-
 <p>You have created a plugin and you want to share it ?
 Write me an <a href="mailto:lyrixx@lyrixx.info">email</a> and I will create a new
 repository on <a href="https://github.com/carew">github/carew</a> for you, or send me a
