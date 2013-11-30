@@ -43,9 +43,7 @@ $ bin/carew build</code></pre>
         </author>
         <link rel="alternate" type="text/html" href="http://carew.github.io/2013/11/27/release-2-0-0-beta2.html"/>
         <content type="html" xml:lang="en"><![CDATA[<p>I'm very happy to release the second BETA of Carew2.</p>
-<p>This version does not ship lot of new features. But you can now use the <a href="../../../cookbook/preview.html">
-        preview command
-    </a> to start the build-in php
+<p>This version does not ship lot of new features. But you can now use the <a href="../../../cookbook/preview.html">preview command</a> to start the build-in php
 web server.</p>
 <p>Then I would like to:</p>
 <ul><li>made error messages easier to understand;</li>
