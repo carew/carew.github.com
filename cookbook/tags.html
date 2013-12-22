@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>How tags works?</title>
+    <title>How do tags work?</title>
 
     <meta name="description" content="The tiny website generator">
     <meta name="author" content="Grégoire Pineau">
@@ -84,10 +84,10 @@
                   <div class="row">
             <div class="span10 offset1 content">
                                                 <div class="page-header">
-                    <h1>How tags works?</h1>
+                    <h1>How do tags work?</h1>
                   </div>
                               
-              <p>You can tag all of your document with the following syntax:</p>
+              <p>You can tag any document with the following syntax:</p>
 <pre><code>---
 title: How to create a new page?
 tags:
@@ -99,16 +99,16 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, eveniet
 consectetur aspernatur dolor voluptatem laboriosam impedit officiis
 consequatur dignissimos nesciunt temporibus aliquam earum porro sapiente
 blanditiis dolorem non. Minus, quae!</code></pre>
-<p>When a document is taggued, it going to be added to the global
+<p>When a document is tagged, it's going to be added to the global variable
 <code>carew.tags.&lt;tag name&gt;</code>.</p>
-<p>More over, few pages will be generated:</p>
-<ul><li>A first one which list all tags.</li>
-<li>A page per tag which list all document.</li>
+<p>Moreover, few pages will be generated:</p>
+<ul><li>A first one which lists all tags.</li>
+<li>A page per tag which lists all documents.</li>
 </ul><p>
 You can create a link to the first page with this syntax <code>{{ path('tags') }}</code>
 and to a specific tag: <code>{{ path('tags/&lt;tag name&gt;') }}</code>.
 </p>
-<p>For the moment, tags pages a not customizable. Open <a href="https://github.com/carew/carew/issues/new">an
+<p>For the moment, tags pages are not customizable. Open <a href="https://github.com/carew/carew/issues/new">an
 issue</a> if you want to be able to
 customize them.</p>            </div>
           </div>

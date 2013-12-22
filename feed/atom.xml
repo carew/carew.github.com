@@ -16,7 +16,7 @@
         </author>
         <link rel="alternate" type="text/html" href="http://carew.github.io/2013/09/15/release-2-0-0-BETA.html"/>
         <content type="html" xml:lang="en"><![CDATA[<p>I'm very happy to release the first BETA of Carew2.</p>
-<p>This version come with a lot of new features:</p>
+<p>This version comes with a lot of new features:</p>
 <ul><li>Built-in pagination.</li>
 <li>Built-in code highlighting.</li>
 <li>Built-in table of content generator.</li>
@@ -25,7 +25,7 @@
 <li>More documentation.</li>
 <li>A better debugging.</li>
 <li>A better design.</li>
-</ul><p>There is still few little thing to polish, but you can already use this new
+</ul><p>There are still few things to polish, but you can already use this new
 version. As usual, the better way to start is with the boiler-plate:</p>
 <pre><code>$ php composer.phar create-project carew/boilerplate my_website -s dev</code></pre>
 <p>Then you can build the website:</p>
@@ -46,9 +46,9 @@ $ bin/carew build</code></pre>
 <p>This version does not ship lot of new features. But you can now use the <a href="../../../cookbook/preview.html">preview command</a> to start the build-in php
 web server.</p>
 <p>Then I would like to:</p>
-<ul><li>made error messages easier to understand;</li>
-<li>add an published flag;</li>
-<li>made post slug customizable;</li>
+<ul><li>make error messages easier to understand;</li>
+<li>add a published flag;</li>
+<li>make post slug customizable;</li>
 <li>add more test case;</li>
 </ul><p>before the final release.</p>]]></content>
     </entry>

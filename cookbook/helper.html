@@ -92,7 +92,7 @@
               <div class="pull-right">
     <div class="well"><ul class="nav nav-list"><li class="nav-header">Quick access</li><li><a href="#globals">Globals</a></li><li><a href="#functions">Functions</a><ul class="nav nav-list"><li><a href="#path">path</a></li><li><a href="#link">link</a></li><li><a href="#render-document-toc">render_document_toc</a></li><li><a href="#render-document">render_document_*</a></li><li><a href="#render-document-2">render_document</a></li><li><a href="#render-documents">render_documents</a></li><li><a href="#paginate">paginate</a></li></ul></li></ul></div>
 </div>
-<p>Inside your templates (<code>.html.twig</code> file) and / or your document (<code>.md</code> files)
+<p>Inside your templates (<code>.html.twig</code> files) and / or your documents (<code>.md</code> files)
 you can use several twig globals / functions.</p>
 <h2 id="globals">Globals<a href="#globals" class="anchor">#</a></h2>
 <p>You have access to the <code>carew</code> global. This is an instance of
@@ -120,13 +120,13 @@ collections of document.</p>
 Values are collections of document.</p>
 </li>
 <li>
-<p><code>relativeRoot</code>: Point the (web) root directory. Can be something like <code>../..</code>.</p>
+<p><code>relativeRoot</code>: Points to the (web) root directory. Can be something like <code>../..</code>.</p>
 </li>
 <li>
-<p><code>currentPath</code>: Point the current path from the <code>relativeRoot</code>. Can be
+<p><code>currentPath</code>: Points to the current path from the <code>relativeRoot</code>. Can be
 something like <code>2012/01/01/hello.html</code>.</p>
 </li>
-<li><code>document</code>: Represent the current document. This is an instance of
+<li><code>document</code>: Represents the current document. This is an instance of
 <code>Carew/Document</code> class.</li>
 </ul><p>Some examples:</p>
 <pre><code>{{ carew.site.decription }}
@@ -169,7 +169,7 @@ located on your disk.</p>
 <li>
 <p><code>title</code> (optional): The link title. Default value is the document title.</p>
 </li>
-<li><code>attrs</code> (optional): An array of HTML attribute.</li>
+<li><code>attrs</code> (optional): An array of HTML attributes.</li>
 </ol><p>If you want to change the generated content, override the <code>document_link</code>
 block.</p>
 <h3 id="render-document-toc">render_document_toc<a href="#render-document-toc" class="anchor">#</a></h3>
@@ -196,9 +196,9 @@ document.</li>
 block.</p>
 <p><strong>Waning</strong>: The block <code>document_*</code> must be defined.</p>
 <h3 id="render-document-2">render_document<a href="#render-document-2" class="anchor">#</a></h3>
-<p><code>render_document</code>: Render a document.</p>
+<p><code>render_document</code>: Renders a document.</p>
 <pre><code>{% render_document(carew.document) %}</code></pre>
-<p>Generate something like:</p>
+<p>Generates something like:</p>
 <pre><code>&lt;h2&gt;Document title&lt;/h2&gt;
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
@@ -211,30 +211,30 @@ quaerat cum.</code></pre>
 type: <code>post</code>, <code>page</code>, <code>api</code>, <code>unknown</code>.</p>
 <p>If you want to change the generated content, override one of theses blocks.</p>
 <h3 id="render-documents">render_documents<a href="#render-documents" class="anchor">#</a></h3>
-<p><code>render_documents</code>: Render a collection of document.</p>
+<p><code>render_documents</code>: Renders a collection of document.</p>
 <pre><code>{% render_document(carew.document) %}</code></pre>
-<p>Generate something like:</p>
+<p>Generates something like:</p>
 <pre><code>&lt;ul&gt;
     &lt;li&gt;&lt;a href="/post1.html"&gt;Post 1&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="/post2.html"&gt;Post 2&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="/post3.html"&gt;Post 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 <p>Arguments:</p>
-<ol><li><code>documents</code>: A collection (array) of document instance.</li>
+<ol><li><code>documents</code>: A collection (array) of document instances.</li>
 </ol><p>If you want to change the generated content, override the <code>documents</code> block.</p>
 <h3 id="paginate">paginate<a href="#paginate" class="anchor">#</a></h3>
-<p><code>paginate</code>: Add pagination support to a collection of document.</p>
+<p><code>paginate</code>: Adds pagination support to a collection of documents.</p>
 <p><strong>warning:</strong> This function can only be applied in a <code>file.md</code>, not in a template.</p>
-<p><strong>warning:</strong> This function return an array. IT should be use with
+<p><strong>warning:</strong> This function returns an array. It should be used with the
 <code>render_documents</code> function.</p>
 <pre><code>{% render_documents(paginate(carew.posts)) %}</code></pre>
 <p>This function will add a pagination on the collection. So it will create as
 many page as needed.</p>
 <p>Arguments:</p>
 <ol><li>
-<p><code>documents</code>: A collection (array) of document instance.</p>
+<p><code>documents</code>: A collection (array) of document instances.</p>
 </li>
-<li><code>maxPerPage</code>: Number of item per page.</li>
+<li><code>maxPerPage</code>: Number of items per page.</li>
 </ol><p>If you want to change the generated content, override the <code>pagination</code>
 block.</p>            </div>
           </div>
