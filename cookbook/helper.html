@@ -150,7 +150,7 @@ something like <code>2012/01/01/hello.html</code>.</p>
 chapter</a> for more information.</p>
 <h3 id="path">path<a href="#path" class="anchor">#</a></h3>
 <p><code>path</code>: Render a path to a document</p>
-<pre><code>{% path('pages/index.md') %}</code></pre>
+<pre><code>{{ path('pages/index.md') }}</code></pre>
 <p>Render something like: <code>index.html</code></p>
 <p>Arguments:</p>
 <ol><li><code>filePath</code>: the full path to the document. i.e.: where the file is
@@ -159,7 +159,7 @@ located on your disk.</li>
 block.</p>
 <h3 id="link">link<a href="#link" class="anchor">#</a></h3>
 <p><code>link</code>: Render a link to a document</p>
-<pre><code>{% link('pages/index.md', 'a link') %}</code></pre>
+<pre><code>{{ link('pages/index.md', 'a link') }}</code></pre>
 <p>Render something like: <code>&lt;a href="index.html"&gt;a link&lt;/a&gt;</code></p>
 <p>Arguments:</p>
 <ol><li>
@@ -174,7 +174,7 @@ located on your disk.</p>
 block.</p>
 <h3 id="render-document-toc">render_document_toc<a href="#render-document-toc" class="anchor">#</a></h3>
 <p><code>render_document_toc</code>: Render the Table Of Content of a document</p>
-<pre><code>{% render_document_toc() %}</code></pre>
+<pre><code>{{ render_document_toc() }}</code></pre>
 <p>Render something like:</p>
 <pre><code>&lt;ul&gt;
     &lt;li&gt;&lt;a href="#section-1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
@@ -197,7 +197,7 @@ block.</p>
 <p><strong>Waning</strong>: The block <code>document_*</code> must be defined.</p>
 <h3 id="render-document-2">render_document<a href="#render-document-2" class="anchor">#</a></h3>
 <p><code>render_document</code>: Renders a document.</p>
-<pre><code>{% render_document(carew.document) %}</code></pre>
+<pre><code>{{ render_document(carew.document) }}</code></pre>
 <p>Generates something like:</p>
 <pre><code>&lt;h2&gt;Document title&lt;/h2&gt;
 
@@ -212,7 +212,7 @@ type: <code>post</code>, <code>page</code>, <code>api</code>, <code>unknown</cod
 <p>If you want to change the generated content, override one of theses blocks.</p>
 <h3 id="render-documents">render_documents<a href="#render-documents" class="anchor">#</a></h3>
 <p><code>render_documents</code>: Renders a collection of document.</p>
-<pre><code>{% render_document(carew.document) %}</code></pre>
+<pre><code>{{ render_document(carew.document) }}</code></pre>
 <p>Generates something like:</p>
 <pre><code>&lt;ul&gt;
     &lt;li&gt;&lt;a href="/post1.html"&gt;Post 1&lt;/a&gt;&lt;/li&gt;
@@ -227,7 +227,7 @@ type: <code>post</code>, <code>page</code>, <code>api</code>, <code>unknown</cod
 <p><strong>warning:</strong> This function can only be applied in a <code>file.md</code>, not in a template.</p>
 <p><strong>warning:</strong> This function returns an array. It should be used with the
 <code>render_documents</code> function.</p>
-<pre><code>{% render_documents(paginate(carew.posts)) %}</code></pre>
+<pre><code>{{ render_documents(paginate(carew.posts)) }}</code></pre>
 <p>This function will add a pagination on the collection. So it will create as
 many page as needed.</p>
 <p>Arguments:</p>
@@ -245,7 +245,7 @@ block.</p>            </div>
                               <a href="http://gregoirepineau.fr">
                   Grégoire Pineau
                 </a>
-                            2013
+                            2014
               <small>
                 with help from <a href="http://carew.github.com/" target="_blank">Carew</a>
               </small>
