@@ -106,7 +106,7 @@ in <code>_carew</code> folder:</p>
 <pre><code>#!/bin/bash
 
 BASE=`dirname $0`
-$BASE/bin/carew build --base-dir=$BASE --web-dir=$BASE/..</code></pre>
+$BASE/vendor/bin/carew carew:build --base-dir=$BASE --web-dir=$BASE/..</code></pre>
 <p>Then you can build the website with <code>_carew/build.sh</code> command.
 Now, you can commit and push everything to your github repository:</p>
 <pre><code>$ git add .
