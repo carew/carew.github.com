@@ -22,13 +22,13 @@
                   <div class="page-header">
             <ul class="list-inline pull-right">
                                                 <li>
-                    <a href="../documentation.html">
-                      Documentation
+                    <a href="../cookbook.html">
+                      Cookbooks
                     </a>
                   </li>
                                   <li>
-                    <a href="../cookbook.html">
-                      Cookbooks
+                    <a href="../documentation.html">
+                      Documentation
                     </a>
                   </li>
                                   <li>
@@ -91,11 +91,11 @@ directory with the same name as the original one.</p>
 {% extends 'vendor/carew/theme-bootstrap/layouts/default.html.twig' %}
 
 {% block nav_right %}
-    &lt;ul class="nav pull-right"&gt;
-        &lt;li class="dropdown"&gt;
+    <ul class="nav pull-right">
+        <li class="dropdown">
             ...
-        &lt;/li&gt;
-    &lt;/ul&gt;
+        </li>
+    </ul>
 {% endblock %}</code></pre>
 <p>Default layouts are in a special namespace <code>default_theme</code>:</p>
 <pre><code>{# my_project/layouts/default.html.twig #}
@@ -103,11 +103,11 @@ directory with the same name as the original one.</p>
 
 {% block nav_right %}
     {{ parent() }}
-    &lt;ul class="nav pull-right"&gt;
-        &lt;li class="dropdown"&gt;
-            &lt;a href="http://gregoirepineau.fr"&gt;Visit my personal website&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
+    <ul class="nav pull-right">
+        <li class="dropdown">
+            <a href="http://gregoirepineau.fr">Visit my personal website</a>
+        </li>
+    </ul>
 {% endblock %}</code></pre>
 <h2 id="blocks-theming">Blocks theming<a href="#blocks-theming" class="anchor">#</a></h2>
 <p>With carew, you have <a href="../cookbook/helper.html">useful helpers set</a>. Almost all helpers are customizable thanks to the special <code>blocks.html.twig</code>.
@@ -116,21 +116,21 @@ Of course, you can overide this template:</p>
 
 {% block document_toc %}
 {% spaceless -%}
-    {% if 0 == deep %}&lt;div class="well"&gt;{% endif %}
-    &lt;ul class="nav nav-list"&gt;
+    {% if 0 == deep %}<div class="well">{% endif %}
+    <ul class="nav nav-list">
         {% if 0 == deep %}
-            &lt;li class="nav-header"&gt;Quick access&lt;/li&gt;
+            <li class="nav-header">Quick access</li>
         {% endif %}
         {% for child in children %}
-            &lt;li&gt;
-                &lt;a href="#{{ child.id }}"&gt;{{ child.title }}&lt;/a&gt;
+            <li>
+                <a href="#{{ child.id }}">{{ child.title }}</a>
                 {% if child.children %}
                     {{ render_document_toc(child.children, deep + 1) }}
                 {% endif %}
-            &lt;/li&gt;
+            </li>
         {% endfor %}
-    &lt;/ul&gt;
-    {% if 0 == deep %}&lt;/div&gt;{% endif %}
+    </ul>
+    {% if 0 == deep %}</div>{% endif %}
 {%- endspaceless %}
 {% endblock %}</code></pre>
 <h2 id="you-have-created-a-theme">You have created a theme?<a href="#you-have-created-a-theme" class="anchor">#</a></h2>

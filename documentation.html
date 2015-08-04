@@ -21,14 +21,14 @@
           <div class="container">
                   <div class="page-header">
             <ul class="list-inline pull-right">
-                                                <li class="active">
-                    <a href="documentation.html">
-                      Documentation
-                    </a>
-                  </li>
-                                  <li>
+                                                <li>
                     <a href="cookbook.html">
                       Cookbooks
+                    </a>
+                  </li>
+                                  <li class="active">
+                    <a href="documentation.html">
+                      Documentation
                     </a>
                   </li>
                                   <li>
@@ -81,7 +81,7 @@ layout: post
 
 # Blogging Like a Hacker
 
-* I&rsquo;m bloggin yo!
+* I’m bloggin yo!
 * ORLY?
 * YARLY!</code></pre>
 <p>Then run <code>./carew build</code> and look at <code>2012/09/20/like-a-hacker.html</code> in the
@@ -122,8 +122,8 @@ order to render the page. If not mentionned, defaults to <code>default</code>, w
 <a href="cookbook/themes.html">See theme documentation for more information</a></p>
 </li>
 <li>
-<p><strong>title:</strong> will be used in the index page and by <code>&lt;title&gt;&lt;/title&gt;</code> and
-<code>&lt;h1&gt;&lt;/h1&gt;</code> HTML tags</p>
+<p><strong>title:</strong> will be used in the index page and by <code><title></title></code> and
+<code><h1></h1></code> HTML tags</p>
 </li>
 <li>
 <p><strong>permalink:</strong> forces the target path of the current document</p>
@@ -146,7 +146,7 @@ navigation: [main]
 ---</code></pre>
 </li>
 </ul><p>All others keys (for example <code>description</code>) will be used in a
-<code>&lt;meta name="" content="" /&gt;</code> HTML tag.</p>
+<code><meta name="" content="" /></code> HTML tag.</p>
 <h3 id="directory-structure">Directory structure<a href="#directory-structure" class="anchor">#</a></h3>
 <p>Now you can use the following directories:</p>
 <ul><li>
@@ -179,13 +179,13 @@ following format: <code>YYYY-mm-dd-slug.md</code> (for e.g. <code>2012-09-20-lik
 <p><strong>config.yml:</strong> configuration file. The <code>site</code> section defines variables which
 will be used in the Twig templates. Here is a sample:</p>
 <pre><code>site:
-  author: Gr&eacute;goire Pineau
+  author: Grégoire Pineau
   title:  Foo
   description: Bar</code></pre>
 <p>And in the template:</p>
-<pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;{{ site.title }}&lt;/title&gt;</code></pre>
+<pre><code><html>
+  <head>
+    <title>{{ site.title }}</title></code></pre>
 </li>
 </ul><p><a href="cookbook/configuration.html">See configuration documention for more
 information</a>.</p>
@@ -204,18 +204,18 @@ onto any static web server.</p>
 <p>Why not read the whole <a href="cookbook.html">Cookbooks</a>?</p>
 <p><ul class="unstyled" style="padding-left:30px"><li class=""><h5><a href="cookbook/configuration.html"><i class="icon-book"></i>
                                 How to configure carew?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/themes.html"><i class="icon-book"></i>
-                                How to use and create themes?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/preview.html"><i class="icon-book"></i>
-                                How to preview your content?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/tags.html"><i class="icon-book"></i>
-                                How do tags work?
-                                                                        </a></h5></li><li class=""><h5><a href="cookbook/plugins.html"><i class="icon-book"></i>
-                                How to use and create plugins?
                                                                         </a></h5></li><li class=""><h5><a href="cookbook/helper.html"><i class="icon-book"></i>
                                 Usefull twig function
                                                                         </a></h5></li><li class=""><h5><a href="cookbook/hosting.html"><i class="icon-book"></i>
                                 How to host a website built with carew?
+                                                                        </a></h5></li><li class=""><h5><a href="cookbook/plugins.html"><i class="icon-book"></i>
+                                How to use and create plugins?
+                                                                        </a></h5></li><li class=""><h5><a href="cookbook/preview.html"><i class="icon-book"></i>
+                                How to preview your content?
+                                                                        </a></h5></li><li class=""><h5><a href="cookbook/tags.html"><i class="icon-book"></i>
+                                How do tags work?
+                                                                        </a></h5></li><li class=""><h5><a href="cookbook/themes.html"><i class="icon-book"></i>
+                                How to use and create themes?
                                                                         </a></h5></li></ul></p>          </div>
         
                   <footer>

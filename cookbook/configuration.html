@@ -22,13 +22,13 @@
                   <div class="page-header">
             <ul class="list-inline pull-right">
                                                 <li>
-                    <a href="../documentation.html">
-                      Documentation
+                    <a href="../cookbook.html">
+                      Cookbooks
                     </a>
                   </li>
                                   <li>
-                    <a href="../cookbook.html">
-                      Cookbooks
+                    <a href="../documentation.html">
+                      Documentation
                     </a>
                   </li>
                                   <li>
@@ -53,7 +53,7 @@ root directory. Here is a sample:</p>
 <pre><code>site:
     title:        Carew
     description:  The tiny website generator
-    author_name:  Gr&eacute;goire Pineau
+    author_name:  Grégoire Pineau
     author_email: lyrixx@lyrixx.info
     author_url:   http://gregoirepineau.fr
 
@@ -61,6 +61,9 @@ engine:
     themes:
         - %dir%/vendor/lyrixx/my-theme-bootstrap
         - %dir%/vendor/carew/theme-bootstrap
+    core_extensions:
+        toc: true # Generate a table of content
+        feed: true # Generate atom feed
     extensions:
         - Carew\Plugin\Sami\SamiExtension
     post_permalink_format: "%year%/%slug%.html"</code></pre>

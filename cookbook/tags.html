@@ -22,13 +22,13 @@
                   <div class="page-header">
             <ul class="list-inline pull-right">
                                                 <li>
-                    <a href="../documentation.html">
-                      Documentation
+                    <a href="../cookbook.html">
+                      Cookbooks
                     </a>
                   </li>
                                   <li>
-                    <a href="../cookbook.html">
-                      Cookbooks
+                    <a href="../documentation.html">
+                      Documentation
                     </a>
                   </li>
                                   <li>
@@ -61,13 +61,13 @@ consectetur aspernatur dolor voluptatem laboriosam impedit officiis
 consequatur dignissimos nesciunt temporibus aliquam earum porro sapiente
 blanditiis dolorem non. Minus, quae!</code></pre>
 <p>When a document is tagged, it's going to be added to the global variable
-<code>carew.tags.&lt;tag name&gt;</code>.</p>
+<code>carew.tags.<tag name></code>.</p>
 <p>Moreover, few pages will be generated:</p>
 <ul><li>A first one which lists all tags.</li>
 <li>A page per tag which lists all documents.</li>
 </ul><p>
 You can create a link to the first page with this syntax <code>{{ path('tags') }}</code>
-and to a specific tag: <code>{{ path('tags/&lt;tag name&gt;') }}</code>.
+and to a specific tag: <code>{{ path('tags/<tag name>') }}</tag></code>.
 </p>
 <p>For the moment, tags pages are not customizable. Open <a href="https://github.com/carew/carew/issues/new">an
 issue</a> if you want to be able to

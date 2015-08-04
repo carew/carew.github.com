@@ -22,13 +22,13 @@
                   <div class="page-header">
             <ul class="list-inline pull-right">
                                                 <li>
-                    <a href="../documentation.html">
-                      Documentation
+                    <a href="../cookbook.html">
+                      Cookbooks
                     </a>
                   </li>
                                   <li>
-                    <a href="../cookbook.html">
-                      Cookbooks
+                    <a href="../documentation.html">
+                      Documentation
                     </a>
                   </li>
                                   <li>
@@ -91,18 +91,18 @@ something like <code>2012/01/01/hello.html</code>.</p>
 <pre><code>{{ carew.site.decription }}
 
 {# read the next chapter, there is a much better way to do that #}
-&lt;ul&gt;
+<ul>
     {% for post in carew.posts %}
-        &lt;li&gt;
-            &lt;a href="{{ relativeRoot }}/{{ document.path }}"&gt;
+        <li>
+            <a href="{{ relativeRoot }}/{{ document.path }}">
                 {{ document.title|title }}
-            &lt;/a&gt;
-        &lt;/li&gt;
+            </a>
+        </li>
     {% endfor %}
-&lt;/ul&gt;
+</ul>
 
 {# read the next chapter, there is a much better way to do that #}
-&lt;img src="{{ carew.relativeRoot }}/image/logo.png" alt="Logo"&gt;</code></pre>
+<img src="{{ carew.relativeRoot }}/image/logo.png" alt="Logo"></code></pre>
 <h2 id="functions">Functions<a href="#functions" class="anchor">#</a></h2>
 <p><strong>Note:</strong> You can tweak generated content for almost all functions by overriding the
 <code>blocks.html.twig</code> template. See the <a href="../cookbook/themes.html">theme
@@ -119,7 +119,7 @@ block.</p>
 <h3 id="link">link<a href="#link" class="anchor">#</a></h3>
 <p><code>link</code>: Render a link to a document</p>
 <pre><code>{{ link('pages/index.md', 'a link') }}</code></pre>
-<p>Render something like: <code>&lt;a href="index.html"&gt;a link&lt;/a&gt;</code></p>
+<p>Render something like: <code><a href="index.html">a link</a></code></p>
 <p>Arguments:</p>
 <ol><li>
 <p><code>filePath</code>: the full path to the document. i.e.: where the file is
@@ -135,11 +135,11 @@ block.</p>
 <p><code>render_document_toc</code>: Render the Table Of Content of a document</p>
 <pre><code>{{ render_document_toc() }}</code></pre>
 <p>Render something like:</p>
-<pre><code>&lt;ul&gt;
-    &lt;li&gt;&lt;a href="#section-1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#section-2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#section-3"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+<pre><code><ul>
+    <li><a href="#section-1">Section 1</a></li>
+    <li><a href="#section-2">Section 2</a></li>
+    <li><a href="#section-3">Section 3</a></li>
+</ul></code></pre>
 <p>Arguments:</p>
 <ol><li><code>toc</code> (optional): A document instance or a TOC. The default value is
 the current document.</li>
@@ -158,7 +158,7 @@ block.</p>
 <p><code>render_document</code>: Renders a document.</p>
 <pre><code>{{ render_document(carew.document) }}</code></pre>
 <p>Generates something like:</p>
-<pre><code>&lt;h2&gt;Document title&lt;/h2&gt;
+<pre><code><h2>Document title</h2>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
 harum nam facilis modi eos est ipsa nostrum recusandae assumenda
@@ -173,11 +173,11 @@ type: <code>post</code>, <code>page</code>, <code>api</code>, <code>unknown</cod
 <p><code>render_documents</code>: Renders a collection of document.</p>
 <pre><code>{{ render_document(carew.document) }}</code></pre>
 <p>Generates something like:</p>
-<pre><code>&lt;ul&gt;
-    &lt;li&gt;&lt;a href="/post1.html"&gt;Post 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/post2.html"&gt;Post 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/post3.html"&gt;Post 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+<pre><code><ul>
+    <li><a href="/post1.html">Post 1</a></li>
+    <li><a href="/post2.html">Post 2</a></li>
+    <li><a href="/post3.html">Post 3</a></li>
+</ul></code></pre>
 <p>Arguments:</p>
 <ol><li><code>documents</code>: A collection (array) of document instances.</li>
 </ol><p>If you want to change the generated content, override the <code>documents</code> block.</p>
